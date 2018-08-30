@@ -1,4 +1,8 @@
 # Projeto IF977 - PrimeiroEmprego
+<p> 
+Projeto da disciplina IF977 - Engenharia de Software - do curso de Bacharelado em Sistemas de Informação do CIn da UFPE
+</p>  
+
 <ul>
   <li>Equipe:</li>
   <li>Eweton - EFFS</li>

@@ -1,0 +1,12 @@
+- Permitir login através de credencias de outros serviços (Google, facebook, LinkedIn*)
+- Traçar perfil comportamental do usuário através de testes padrões do serviço
+- Identificar características comportamentais mais especificas através de componentes de gameficação presentes no serviço
+- Permitir às empresas a construção de testes/desafios 
+- Disponibilizar e gerenciar testes de nivelamento criados pela empresa
+- Sugerir testes de acordo com o perfil do usuário
+- Permitir a partilha de testes através de links
+- Permitir alteração nas respostas dos testes antes do upload do mesmo 
+- Permitir a empresa listar e filtrar usuários através de suas características, resultados e habilidades
+- Sugeririr leituras/vídeos sobre assuntos que aprimorem o candidato para o que ele busca
+ - O sistema deve sugerir testes posteriores as sugestões para auferir dedicação do candidato
+- Sincronizar perfil com o LinkedIn

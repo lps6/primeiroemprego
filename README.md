@@ -5,7 +5,7 @@ Projeto da disciplina IF977 - Engenharia de Software - do curso de Bacharelado e
 
 <h1>Equipe:</h1>
 <ul>
-  <li>Eweton - EFFS - Desenvolvedor </li>
+  <li>Ewerton - EFFS - Desenvolvedor </li>
   <li>Gabriel - GSF4 - Desenvolvedor </li>
   <li>Henrique - HMF- Scrum master, Engenheiro de Testes e Desenvolvedor</li>
   <li>Lucas - LPS6 - Gerente de Projeto, Product Owner e Desenvolvedor</li>

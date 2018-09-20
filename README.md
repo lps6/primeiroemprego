@@ -18,7 +18,7 @@ Nossa missão é conectar profissionais com pouca ou nenhuma experiência a empr
 
 <h1>Descrição:</h1> 
 <p> 
-Montamos o perfil profissional completo do candidato baseado nas ementas das disciplinas cursadas e resultado de testes comumente utilizados em processos seletivos. Ah! Tudo isso conecta ao LinkedIn atualizando o perfil do candidato lá para maior visibilidade.
+Montamos o perfil profissional completo do candidato baseado nas ementas das disciplinas cursadas e resultado de testes comumente utilizados em processos seletivos. Depois disso o candidato vai comprindo os desafios propostos por recrutadores das mais diversas empresas. Cada desafio cumprido aumenta suas chances de conseguir uma oportunidade de primeiro emprego. Ah! Tudo isso conecta ao LinkedIn atualizando o perfil do candidato lá para maior visibilidade.
 </p>  
 
 

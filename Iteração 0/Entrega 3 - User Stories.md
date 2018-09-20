@@ -1,3 +1,7 @@
+# Ata da Reunião de Definição do Escopo
+
+Participantes: Todos os membro do grupo
+
 - Permitir login através de credencias de outros serviços (Google, facebook, LinkedIn*)
 - Traçar perfil comportamental do usuário através de testes padrões do serviço
 - Identificar características comportamentais mais especificas através de componentes de gameficação presentes no serviço

@@ -2,15 +2,72 @@
 
 Participantes: Todos os membro do grupo
 
-- Permitir login através de credencias de outros serviços (Google, facebook, LinkedIn*)
-- Traçar perfil comportamental do usuário através de testes padrões do serviço
-- Identificar características comportamentais mais especificas através de componentes de gameficação presentes no serviço
-- Permitir às empresas a construção de testes/desafios 
-- Disponibilizar e gerenciar testes de nivelamento criados pela empresa
-- Sugerir testes de acordo com o perfil do usuário
-- Permitir a partilha de testes através de links
-- Permitir alteração nas respostas dos testes antes do upload do mesmo 
-- Permitir a empresa listar e filtrar usuários através de suas características, resultados e habilidades
-- Sugeririr leituras/vídeos sobre assuntos que aprimorem o candidato para o que ele busca
- - O sistema deve sugerir testes posteriores as sugestões para auferir dedicação do candidato
-- Sincronizar perfil com o LinkedIn
+User Stories
+
+Fazer login:
+
+Como um usuário
+Eu quero fazer login através da minha atual conta do Google, Facebook ou LinkedIn
+Para que eu tenha acesso ao sistema
+
+Criar testes:
+
+Como empresa
+Eu quero criar testes/desafios
+Para que candidatos respondam e eu possa analisá-los conforme minhas necessidades
+
+Traçar perfil comportamental:
+
+Como um empresa
+Eu quero traçar o perfil comportamental do usuário através de testes padrões do serviço e gameficação
+Para que eu possa filtrar os candidatos que se adequem às minhas necessidades
+
+Disponibilizar testes:
+
+Como candidato
+Eu quero que seja disponibilizados os testes lançados pelas empresas
+Para que eu possa respondê-los 
+
+Compartilhar links:
+
+Como usuário do sistema
+Eu quero poder compartilhar links de testes
+Para que outras pessoas possam responder à eles.
+
+Sugestão de testes:
+
+Como usuário do sistema
+Eu quero receber sugestões de testes com base no meu perfil
+Para que eu possa responder a testes interessantes à mim
+
+Alterar respostas:
+
+Como Usuário
+Eu quero ter a opção de alterar uma resposta dada a uma pergunta do teste
+Para que eu possa responder corretamente antes de fazer o upload do teste
+
+Listar candidatos:
+
+Como empresa
+Eu quero listar e filtrar candidatos através de suas características, resultados e habilidades
+Para que eu ache mais rapidamente candidatos de meu interesse
+
+Sugestões de aprendizado:
+
+Como usuário
+Eu quero receber sugestões de leituras/vídeos sobre temas que me interessem
+Para que eu possa estudar e aprimorar meus conhecimentos
+
+Sincronização com o perfil do LinkedIn:
+
+Como usuário do sistema
+Eu quero sincronizar meu perfil no sistema, com o do LinkedIn
+Para que eu possa ter meu perfil atualizado em ambas as plataformas facilmente
+
+Testes para aferir dedicação:
+
+Como empresa
+Eu quero que sejam mostrados testes/desafios aos candidatos
+Para que possa-se verificar o nível de dedicação dos mesmos
+
+

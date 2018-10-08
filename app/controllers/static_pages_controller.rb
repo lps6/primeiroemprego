@@ -1,4 +1,4 @@
-class StaticPagesController < ApplicationController
+class StaticPageController < ApplicationController
   def home
   end
 

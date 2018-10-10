@@ -1,35 +1,35 @@
-<h1>Post mortem da iteraÁ„o 1</h1> 
+<h1>Post mortem da itera√ß√£o 1</h1> 
 
-(25/09/2018 ‡ 08/10/2018)  
+(25/09/2018 √† 08/10/2018)  
   
 <h2>O que estava planejado</h2>
   
-InÌcio do desenvolvimento - CriaÁ„o da aplicaÁ„o rails: Lucas  
+In√≠cio do desenvolvimento - Cria√ß√£o da aplica√ß√£o rails: Lucas  
 Criar Splash Page inicial: Lucas  
-Criar a p·gina de login: Gabriel  
-Criar a p·gina de Cadastro: Gabriel  
-Criar Rspec das HUís: Henrique  
-Testes com APIís - Login (Google, Facebook e LinkedIn): Ewerton  
-Testes com API do LinkedIn (IntegraÁ„o, compartilhamento, etc): Ewerton  
-Criar cucumber com as histÛrias de usu·rio  
+Criar a p√°gina de login: Gabriel  
+Criar a p√°gina de Cadastro: Gabriel  
+Criar Rspec das HU‚Äôs: Henrique  
+Testes com API‚Äôs - Login (Google, Facebook e LinkedIn): Ewerton  
+Testes com API do LinkedIn (Integra√ß√£o, compartilhamento, etc): Ewerton  
+Criar cucumber com as hist√≥rias de usu√°rio  
   
 <h2>O que foi feito</h2>  
   
-InÌcio do desenvolvimento - criaÁ„o da aplicaÁ„o  
-CriaÁ„o da tela inicial  
-A tela foi criada, mas devido a erros com erros do bootstrap e postgre em relaÁ„o ao Hiroku, a tela n„o foi aprimorada atÈ o fim da iteraÁ„o.  
-Testes com APIís - Login 
-Os testes foram feitos com as APIís do Facebook, Google e LinkedIn, onde foram encontradas algumas dificuldades com a api do LinkedIn, em especÌfico, que ter· mais foco para seu entendimento e posterior implementaÁ„o no sistema. APIís de login do facebook do Google e Facebook foram testadas com sucesso.  
+In√≠cio do desenvolvimento - cria√ß√£o da aplica√ß√£o  
+Cria√ß√£o da tela inicial:  
+- A tela foi criada, mas devido a erros com erros do bootstrap e postgre em rela√ß√£o ao Hiroku, a tela n√£o foi aprimorada at√© o fim da itera√ß√£o.  
+Testes com API‚Äôs - Login: 
+- Os testes foram feitos com as API‚Äôs do Facebook, Google e LinkedIn, onde foram encontradas algumas dificuldades com a api do LinkedIn, em espec√≠fico, que ter√° mais foco para seu entendimento e posterior implementa√ß√£o no sistema. API‚Äôs de login do facebook do Google e Facebook foram testadas com sucesso.  
 
-<h2>O que n„o foi feito</h2>  
+<h2>O que n√£o foi feito</h2>  
   
-P·gina de login/cadastro  
-N„o foi feita devido a problemas no postgre e erros provenientes do Windows.  
-Testes com APIs do LinkedIn  
-Tivemos problema com o Login do linkedin. AlÈm do login, foram feitos mais alguns testes, mas foram interrompidos temporariamente.  
+P√°gina de login/cadastro:  
+- N√£o foi feita devido a problemas no postgre e erros provenientes do Windows.  
+Testes com APIs do LinkedIn:  
+- Tivemos problema com o Login do linkedin. Al√©m do login, foram feitos mais alguns testes, mas foram interrompidos temporariamente.  
   
-<h2>LiÁıes aprendidas</h2> 
+<h2>Li√ß√µes aprendidas</h2> 
   
-A import‚ncia da leitura da documentaÁ„o de uma ferramenta antes de utiliz·-la (foi crucial para nossa desenvoltura na utilizaÁ„o do postgre.  
-A import‚ncia do alinhamento dos membros quanto ao setup de suas m·quinas no que se relaciona ‡s ferramentas utilizadas no projeto (vers„o do ruby, etc)  
+A import√¢ncia da leitura da documenta√ß√£o de uma ferramenta antes de utiliz√°-la (foi crucial para nossa desenvoltura na utiliza√ß√£o do postgre.  
+A import√¢ncia do alinhamento dos membros quanto ao setup de suas m√°quinas no que se relaciona √†s ferramentas utilizadas no projeto (vers√£o do ruby, etc)  
 

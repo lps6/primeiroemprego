@@ -17,16 +17,16 @@ Criar cucumber com as histórias de usuário
   
 Início do desenvolvimento - criação da aplicação  
 Criação da tela inicial:  
-- A tela foi criada, mas devido a erros com erros do bootstrap e postgre em relação ao Hiroku, a tela não foi aprimorada até o fim da iteração.  
+(A tela foi criada, mas devido a erros com erros do bootstrap e postgre em relação ao Hiroku, a tela não foi aprimorada até o fim da iteração)   
 Testes com API’s - Login: 
-- Os testes foram feitos com as API’s do Facebook, Google e LinkedIn, onde foram encontradas algumas dificuldades com a api do LinkedIn, em específico, que terá mais foco para seu entendimento e posterior implementação no sistema. API’s de login do facebook do Google e Facebook foram testadas com sucesso.  
+(Os testes foram feitos com as API’s do Facebook, Google e LinkedIn, onde foram encontradas algumas dificuldades com a api do LinkedIn, em específico, que terá mais foco para seu entendimento e posterior implementação no sistema. API’s de login do facebook do Google e Facebook foram testadas com sucesso.)  
 
 <h2>O que não foi feito</h2>  
   
 Página de login/cadastro:  
-- Não foi feita devido a problemas no postgre e erros provenientes do Windows.  
+(Não foi feita devido a problemas no postgre e erros provenientes do Windows.)  
 Testes com APIs do LinkedIn:  
-- Tivemos problema com o Login do linkedin. Além do login, foram feitos mais alguns testes, mas foram interrompidos temporariamente.  
+(Tivemos problema com o Login do linkedin. Além do login, foram feitos mais alguns testes, mas foram interrompidos temporariamente.)  
   
 <h2>Lições aprendidas</h2> 
   

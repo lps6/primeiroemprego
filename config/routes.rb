@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users
+  resources :dashboard
   get 'static_pages/home'
   #get "help" => 'Static_Pages#help'
   get 'static_pages/help'

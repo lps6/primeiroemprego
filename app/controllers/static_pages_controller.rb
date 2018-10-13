@@ -9,7 +9,7 @@ class StaticPagesController < ApplicationController
     
     @jumbotron = 'Nossa missão é conectar profissionais e empresas. Realize missões e conquiste seu espaço no mercado!'
     
-    @tagline = 'Pronto para realziar sua primeira missão?'
+    @tagline = 'Pront@ para sua primeira missão?'
   end
 
   def help

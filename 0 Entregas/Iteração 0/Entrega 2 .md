@@ -1,4 +1,4 @@
-# Entrega 2
+# Planejamento de Reuniões
 #Equipe
 <ul>
   <li>Eweton </li>

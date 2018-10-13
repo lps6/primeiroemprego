@@ -1,0 +1,5 @@
+[WARNING] The model name 'users' was recognized as a plural, using the singular 'user' instead. Override with --force-plural or setup custom inflection rules for this noun before running the generator.
+      invoke  active_record
+      create    db/migrate/20181013174413_add_devise_to_users.rb
+      insert    app/models/user.rb
+       route  devise_for :users

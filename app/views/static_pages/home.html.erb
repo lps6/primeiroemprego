@@ -1,23 +1,20 @@
-  <div class=”container-fluid”>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-      <a class="navbar-brand" href="#">GetXp</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto" >
-          <li class="nav-item">
-            <a class="nav-link" href="#">Log In</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Sign In</a>
-          </li>    
-      </div>      
-    </nav> 
-    <div class="jumbotron">
-     <h1 class="display-3"><%=@title%></h1>
-      <p class="lead"><%=@jumbotron%></p>
-    </div>   
-  </div>
-
+<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#"><%=@title%></a>
+      
+      <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap">
+          <%= link_to "Sign in", new_user_session_path, class: "nav-link" %>
+        </li>
+       
+      </ul>
+</nav> 
+<div class="jumbotron">
+  <h1 class="display-3"><%=@title%></h1>
+  <p class="lead"><%=@jumbotron%></p>
+  <hr class="my-2">
+  <p><%= @tagline %></p>
+  <p class="lead">
+  <p class="lead">
+    <%= link_to "Sign up", new_user_registration_path, class: "btn btn-dark", role: "button" %>
+  </p>  
+</div>   

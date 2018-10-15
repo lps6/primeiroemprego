@@ -11,7 +11,7 @@
 
 
   <body>
-    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+    <nav class="navbar navbar-dark bg-dark flex-md-nowrap p-0 shadow">
         <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">GetXp</a>
         
         <ul class="navbar-nav px-3">
@@ -23,11 +23,13 @@
         
         </ul>
     </nav> 
+    <!--
     <% if user_signed_in? %>
       Logado como <%= current_user.email %>! Não é você? <%= link_to "Sign out", destroy_user_session_path, :method => :delete %> 
     <% else %> 
     <%= link_to "Sign up", new_user_registration_path %> / <%= link_to "Sign in", new_user_session_path %> <% end %>
-    <div class="container">
+    -->
+    <div class="container-fluid">
       <%= yield %>
     </div>
 

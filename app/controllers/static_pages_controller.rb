@@ -7,9 +7,9 @@ class StaticPagesController < ApplicationController
     
     @title = 'GetXp'
     
-    @jumbotron = 'Nossa missão é conectar profissionais com pouca ou nenhuma experiência a 
-    empresas dispostas a dar primeiras oportunidades.'
+    @jumbotron = 'Nossa missão é conectar profissionais e empresas. Realize missões e conquiste seu espaço no mercado!'
     
+    @tagline = 'Pront@ para sua primeira missão?'
   end
 
   def help

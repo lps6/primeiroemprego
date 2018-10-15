@@ -2,6 +2,12 @@
 
 Participantes: Todos os membro do grupo
 
+Cliente: Luiz Claudio
+
+O que foi discutido:
+  
+  Levantamos necessidades do cliente referente a contratações de profissionais sem experiencia, validamos nossa proposta de valor abarcando as solicitações e sugestões do cliente. Levantamos os requisitos a seguir:
+
 User Stories
 
 Fazer login:

@@ -10,15 +10,16 @@
     </div>
 
     <div class="field">
-      <%= f.label :password %>
+      <%= f.label :password, "Senha" %><br/>
+      <%= f.password_field :password, autocomplete: "new-password" %><br/>
       <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <em>(No mínimo, <%= @minimum_password_length %> caracteres)</em>
       <% end %><br />
-      <%= f.password_field :password, autocomplete: "new-password" %>
+      
     </div>
 
     <div class="field">
-      <%= f.label :password_confirmation %><br />
+      <%= f.label :password_confirmation, "Confirmar senha"%><br />
       <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
     </div>
 

@@ -17,8 +17,12 @@
         <ul class="navbar-nav px-3">
           <li class="nav-item text-nowrap">
 
-            <%= link_to "Sign in", new_user_session_path, class: "nav-link" %>
-
+            <%- if controller_name != 'sessions' %>
+              <%= link_to "Log in", new_session_path(resource_name), class: "nav-link" %><br />
+            <% end -%>
+            <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+              <%= link_to "Sign up", new_registration_path(resource_name), class: "nav-link" %><br />
+            <% end -%>
           </li>
         
         </ul>

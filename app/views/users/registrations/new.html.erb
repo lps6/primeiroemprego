@@ -10,6 +10,23 @@
     </div>
 
     <div class="field">
+      <%= f.label :nome %><br />
+      <%= f.text_field :name %>
+    </div>
+
+    <div class="field">
+      <%= f.label :CPF %><br />
+      <%= f.text_field :CPF %>
+    </div>
+
+    <div class="field">
+      <%= f.label :sobrenome %><br />
+      <%= f.text_field :last_name %>
+    </div>
+
+  
+
+    <div class="field">
       <%= f.label :password %>
       <% if @minimum_password_length %>
       <em>(<%= @minimum_password_length %> characters minimum)</em>

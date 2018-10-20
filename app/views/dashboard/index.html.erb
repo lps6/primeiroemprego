@@ -1,2 +1,5 @@
 <h1> Esse é o dashboard!! :o </h1>
-  <%= link_to('Logout', destroy_user_session_path, method: :delete) %>        
+
+<%= current_user.birth_date %>
+<%= link_to('Logout', destroy_user_session_path, method: :delete) %>        
+

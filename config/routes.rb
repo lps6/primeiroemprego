@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'profile/new'
+  get 'profile/edit'
   devise_for :users
   resources :dashboard
   get 'static_pages/home'

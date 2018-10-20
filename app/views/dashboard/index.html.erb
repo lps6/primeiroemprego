@@ -2,4 +2,4 @@
 
 <%= current_user.birth_date %>
 <%= link_to('Logout', destroy_user_session_path, method: :delete) %>        
-
+<%= link_to ("Editar", edit_user_registration_path, class: "btn btn-dark", role: "button") %>

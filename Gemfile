@@ -71,3 +71,9 @@ gem 'cancancan'
 #gema para autenticação de usuário
 gem 'devise'
 
+#gem para login através de APIs
+gem 'omniauth'
+
+#gem para login através do facebook
+gem 'omniauth-facebook'
+

@@ -7,14 +7,17 @@ Projeto da disciplina IF977 - Engenharia de Software - do curso de Bacharelado e
 <ul>
   <li>Ewerton - EFFS - Desenvolvedor </li>
   <li>Gabriel - GSF4 - Desenvolvedor </li>
-  <li>Henrique - HMF- Scrum master, Engenheiro de Testes e Desenvolvedor</li>
-  <li>Lucas - LPS6 - Gerente de Projeto, Product Owner e Desenvolvedor</li>
+  <li>Henrique - HMF- Engenheiro de Testes e Desenvolvedor</li>
+  <li>Lucas - LPS6 - Gerente de Projeto e Desenvolvedor</li>
 </ul>
  
 <h1>Justificativa:</h1> 
 <p> 
 Nossa missão é conectar profissionais com pouca ou nenhuma experiência a empresas dispostas a dar primeiras oportunidades.
 </p>  
+
+![alt text](https://www.google.com.br/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwj9hK3thpveAhUDj1kKHaPXAmUQjRx6BAgBEAU&url=https%3A%2F%2Fme.me%2Fi%2Fyou-dont-have-experience-need-a-job-but-i-need-74521cda734f42a388d33df683d171f0&psig=AOvVaw135Yj8yAl81tlflhTQVxPS&ust=1540332229100841 "Quem nunca?!")
+
 
 <h1>Descrição:</h1> 
 <p> 

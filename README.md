@@ -16,7 +16,7 @@ Projeto da disciplina IF977 - Engenharia de Software - do curso de Bacharelado e
 Nossa missão é conectar profissionais com pouca ou nenhuma experiência a empresas dispostas a dar primeiras oportunidades.
 </p>  
 
-![alt text](https://www.google.com.br/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwj9hK3thpveAhUDj1kKHaPXAmUQjRx6BAgBEAU&url=https%3A%2F%2Fme.me%2Fi%2Fyou-dont-have-experience-need-a-job-but-i-need-74521cda734f42a388d33df683d171f0&psig=AOvVaw135Yj8yAl81tlflhTQVxPS&ust=1540332229100841 "Quem nunca?!")
+![alt text](https://github.com/lps6/primeiroemprego/blob/master/0%20Entregas/xpmeme.png "So True!")
 
 
 <h1>Descrição:</h1> 

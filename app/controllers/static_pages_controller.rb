@@ -11,9 +11,9 @@ class StaticPagesController < ApplicationController
     
     @tagline = 'Pront@ para sua primeira missão?'
 
-    @title = 'Quer contratar pelo GetXp?'
+    @titleforcompanies = 'Quer contratar pelo GetXp?'
     
-    @jumbotron = 'Nossa missão é conectar profissionais e empresas. Crie suas missões ou veja os resultados das missões já existentes e traga para seu time um profissional alinhado com seus valores e necessidades!'
+    @jumbotronforcompanies = 'Nossa missão é conectar profissionais e empresas. Crie suas missões ou veja os resultados das missões já existentes e traga para seu time um profissional alinhado com seus valores e necessidades!'
   end
 
   def help

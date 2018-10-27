@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'dashboard_empresa/index'
   devise_for :companies
   devise_for :users
   resources :dashboard

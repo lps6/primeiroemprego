@@ -1,0 +1,2 @@
+module DashboardEmpresaHelper
+end

@@ -7,21 +7,27 @@
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
+
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+
   <div class="field">
       <%= f.label :CPF %><br />
       <%= f.text_field :cpf %>
   </div>
+
   <div class="field">
       <%= f.label :Sobre_mim %><br />
-      <%= f.text_field :about_me %>
+      <%= f.text_area :about_me %>
   </div>
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
+  
+
   <div class="date">
       <%= f.label :data_de_nascimento %><br />
       <%= f.date_field :birth_date, autocomplete: "email" %>
   </div>
+
   <div class="field">
     <%= f.label :password %> <i>(Deixar em branco, caso não queira modificar sua senha.)</i><br />
     <%= f.password_field :password, autocomplete: "new-password" %>

@@ -1,7 +1,35 @@
 
-  <body class="text-center">
+<body class="text-center">
+  <div class="container">
     <h2>Sign In</h2>
+    
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password, "Senha" %><br />
+        <%= f.password_field :password, autocomplete: "current-password", class:"form-control" %>
+      </div>
+
+      <% if devise_mapping.rememberable? -%>
+        <div class="custom-control custom-checkbox">
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me, "Lembrar de mim"%>
+        </div>
+      <% end -%>
+
+      <div class="actions">
+        <%= f.submit "Log in" %>
+      </div>
+    <% end %>
+
+    <%= render "users/shared/links" %>
+    <br> 
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    
     <script type="text/javascript">
       function onSignIn(googleUser) {
         var profile = googleUser.getBasicProfile();
@@ -21,31 +49,7 @@
     });
   }
   </script>
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-      <div class="field">
-        <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-      </div>
-
-      <div class="field">
-        <%= f.label :password, "Senha" %><br />
-        <%= f.password_field :password, autocomplete: "current-password" %>
-      </div>
-
-      <% if devise_mapping.rememberable? -%>
-        <div class="field">
-          <%= f.check_box :remember_me%>
-          <%= f.label :remember_me, "Lembrar de mim"  %>
-        </div>
-      <% end -%>
-
-      <div class="actions">
-        <%= f.submit "Log in" %>
-      </div>
-    <% end %>
-
-    <%= render "users/shared/links" %>
-    <br> 
     <%= link_to "Empresa?", new_company_session_path, class: "nav-link" %>
-  </body> 
+  </div>
+</body> 
  

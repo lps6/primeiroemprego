@@ -7,6 +7,7 @@
 * Criação do cadastro da empresa: Gabriel  
 * Criação do login da empresa: Ewertom  
 * Criação do rodapé da pagína: Lucas  
+* Bootstrap dos forms: Lucas 
 * Implementação do sigin por APIs (Facebook, LimkedIn, Google): Ewerton  
 * Testes unitarios em Rspec: Henrique 
 * Implementar Dashboad de cadidatos: Lucas e Gabriel
@@ -17,6 +18,7 @@
 * Criação do cadastro da empresa: Gabriel  
 * Criação do login da empresa: Ewertom  
 * Criação do rodapé da pagína: Lucas  
+* Bootstrap dos forms: Lucas  
 * Testes unitarios em Rspec: Henrique 
 
 <h2>O que não foi feito</h2> 

@@ -4,7 +4,8 @@
   
 <h2>O que estava planejado</h2>
    
-* Criação do cadastro e login da empresa: Gabriel  
+* Criação do cadastro da empresa: Gabriel  
+* Criação do login da empresa: Ewertom  
 * Criação do rodapé da pagína: Lucas  
 * Implementação do sigin por APIs (Facebook, LimkedIn, Google): Ewerton  
 * Testes unitarios em Rspec: Henrique 
@@ -13,7 +14,8 @@
 
 <h2>O que foi feito</h2>  
 
-* Criação do cadastro e login da empresa: Gabriel  
+* Criação do cadastro da empresa: Gabriel  
+* Criação do login da empresa: Ewertom  
 * Criação do rodapé da pagína: Lucas  
 * Testes unitarios em Rspec: Henrique 
 

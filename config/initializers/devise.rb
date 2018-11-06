@@ -258,6 +258,10 @@ config.scoped_views = true
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
 
+  Rails.application.config.middleware.use OmniAuth::Builder do
+    provider :linkedin, ENV['78ldy4l78xq6l9'], ENV['qDbOQdIjPbOu6MCy'], :scope => 'r_fullprofile r_emailaddress r_network'
+  end
+
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.

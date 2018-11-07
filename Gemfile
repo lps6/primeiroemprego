@@ -78,4 +78,4 @@ gem 'omniauth'
 #gem para login através do facebook
 gem 'omniauth-facebook'
 
-gem 'omniauth-linkedin-oauth2'
+gem 'omniauth-linkedin'

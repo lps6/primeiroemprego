@@ -20,28 +20,30 @@
 * Criação do rodapé da pagína: Lucas  
 * Bootstrap dos forms: Lucas  
 * Testes unitarios em Rspec: Henrique 
+* Implementação do sigin por APIs (Facebook, LimkedIn, Google): Ewerton  
 
 <h2>O que não foi feito</h2> 
 
 * Criaçaõ de função para listar usuarios/candidatos: Gabriel e Lucas  
-* Implementação do sigin por APIs (Facebook, LimkedIn, Google): Ewerton  
 * Implementar Dashboad de cadidatos: Lucas e Gabriel
 * Implementar Dashboad de empresa: Lucas e Henrique  
 
 <h2>Dificuldades e Impedimentos</h2> 
 
-* Problemas encontrados com as gemas Oauth para Google e Facebook;
+* Problemas encontrados com as gemas Oauth para Linkedn Google e Facebook;
 
 <h2>Lições aprendidas</h2> 
 
-* Uso das APIs
+* Uso de documentação das APIs
 
 <h2>Para a Próxima Iteração</h2> 
 
-* Implementação do sigin por APIs (Facebook, LimkedIn, Google): Ewerton  
-* Implementar Dashboad de cadidatos: Gabriel
+* Implementar Dashboad de cadidatos: Gabriel e Henrique
 * Implementar Dashboad de empresa: Henrique  
 * Implementar Criação de Testes: Ewertom
 * Implementar missão 0 (testes psicotecnicos): Lucas
+* Sincronização com Linkedn: Gabriel
+
+
 
 

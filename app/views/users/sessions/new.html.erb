@@ -1,22 +1,23 @@
 
-  <body class="text-center">
+<body class="text-center">
+  <div class="container">
     <h2>Sign In</h2>
-
+    
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="field">
         <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control" %>
       </div>
 
       <div class="field">
         <%= f.label :password, "Senha" %><br />
-        <%= f.password_field :password, autocomplete: "current-password" %>
+        <%= f.password_field :password, autocomplete: "current-password", class:"form-control" %>
       </div>
 
       <% if devise_mapping.rememberable? -%>
-        <div class="field">
-          <%= f.check_box :remember_me%>
-          <%= f.label :remember_me, "Lembrar de mim"  %>
+        <div class="custom-control custom-checkbox">
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me, "Lembrar de mim"%>
         </div>
       <% end -%>
 
@@ -27,7 +28,13 @@
 
     <%= render "users/shared/links" %>
     <br> 
+    
+    
     <%= link_to "Empresa?", new_company_session_path, class: "nav-link" %>
+<<<<<<< HEAD
+  </div>
+</body> 
+=======
   </body> 
 
 
@@ -35,4 +42,5 @@
 
 <%= link_to "Sign in with Linkedin",user_linkedin_omniauth_authorize_path %>
 
+>>>>>>> 1c72781ce84c799b7f9b4124b57e9cfa3fdbd632
  

@@ -1,52 +1,62 @@
-<body class="text-center">  
-  <h2>Sign up</h2>
+<body class="text-center"> 
+  <div class="container">
+    <form>
+      <h2>Sign up</h2>
 
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-    <%= devise_error_messages! %>
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= devise_error_messages! %>
 
+       
+          <div class="field">
+            <%= f.label :nome %><br />
+            <%= f.text_field :name, autofocus: true, class:"form-control" %>
+          </div>
+        
+          <div class="field">
+            <%= f.label :CPF %><br />
+            <%= f.text_field :cpf, class:"form-control" %>
+          </div>
 
+       
 
-    <div class="field">
-      <%= f.label :nome %><br />
-      <%= f.text_field :name, autofocus: true %>
-    </div>
+        
+          <div class="date">
+            <%= f.label :data_de_nascimento %><br />
+            <%= f.date_field :birth_date, autocomplete: "email", class:"form-control" %>
+          </div>
+          <div class="field">
+            <%= f.label :Sobre_mim %><br />
+            <%= f.text_area :about_me , class:"form-control" %>
+          </div>
+          
+       
+          <div class="field">
+            <%= f.label :email %><br />
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control" %>
+          </div>
 
-    <div class="field">
-      <%= f.label :CPF %><br />
-      <%= f.text_field :cpf %>
-    </div>
-    <div class="field">
-      <%= f.label :Sobre_mim %><br />
-      <%= f.text_area :about_me %>
-    </div>
-    <div class="date">
-      <%= f.label :data_de_nascimento %><br />
-      <%= f.date_field :birth_date, autocomplete: "email" %>
-    </div>
+          <div class="field">
+            <%= f.label :password, "Senha" %><br/>
+            <%= f.password_field :password, autocomplete: "new-password", class:"form-control" %><br/>
+            <% if @minimum_password_length %>
+            <em>(No mínimo, <%= @minimum_password_length %> caracteres)</em>
+            <% end %>
+            
+          
 
-    <div class="field">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-    </div>
+          <div class="field">
+            <%= f.label :password_confirmation, "Confirmar senha"%><br />
+            <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"form-control" %>
+          </div>
 
-    <div class="field">
-      <%= f.label :password, "Senha" %><br/>
-      <%= f.password_field :password, autocomplete: "new-password" %><br/>
-      <% if @minimum_password_length %>
-      <em>(No mínimo, <%= @minimum_password_length %> caracteres)</em>
-      <% end %><br />
-      
-    </div>
+        </div>
+        
+        <div class="actions">
+          <%= f.submit "Sign up" %>
+        </div>
+      <% end %>
 
-    <div class="field">
-      <%= f.label :password_confirmation, "Confirmar senha"%><br />
-      <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-    </div>
-
-    <div class="actions">
-      <%= f.submit "Sign up" %>
-    </div>
-  <% end %>
-
-  <%= render "users/shared/links" %>
+      <%= render "users/shared/links" %>
+    </form>
+  </div>
 </body>

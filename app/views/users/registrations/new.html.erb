@@ -1,7 +1,8 @@
 <body class="text-center"> 
-  <div class="container">
+  <div align="center">
+  <div class="col-sm-4 col-sm-offset-4">
     <form>
-      <h2>Sign up</h2>
+      <h2>Cadastro</h2>
 
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= devise_error_messages! %>
@@ -52,11 +53,13 @@
         </div>
         
         <div class="actions">
-          <%= f.submit "Sign up" %>
+          <%= f.submit "Cadastrar", class: "btn btn-primary btn-block btn-lg" %>
         </div>
       <% end %>
 
       <%= render "users/shared/links" %>
     </form>
   </div>
+</div>
 </body>
+

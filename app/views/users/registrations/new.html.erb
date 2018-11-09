@@ -1,6 +1,5 @@
 <body class="text-center"> 
   <div class="container">
-    <form>
       <h2>Sign up</h2>
 
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -17,9 +16,7 @@
             <%= f.text_field :cpf, class:"form-control" %>
           </div>
 
-       
-
-        
+               
           <div class="date">
             <%= f.label :data_de_nascimento %><br />
             <%= f.date_field :birth_date, autocomplete: "email", class:"form-control" %>

@@ -6,8 +6,14 @@ function render_question(){
           .setChoiceValues(['Cats','Dogs'])
           .showOtherOption(true);
         break;
-    case y:
-        code block
+    case "check":
+        var item = form.addCheckboxItem();
+          item.setTitle('What condiments would you like on your hot dog?');
+          item.setChoices([
+          item.createChoice('Ketchup'),
+          item.createChoice('Mustard'),
+          item.createChoice('Relish')
+      ]);
         break;
     default:
         code block

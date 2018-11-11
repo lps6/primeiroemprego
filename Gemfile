@@ -79,3 +79,6 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 
 gem 'omniauth-linkedin'
+
+
+gem 'google-api-client', '~> 0.8'

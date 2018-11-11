@@ -1,0 +1,2 @@
+class AnswerGrid < ApplicationRecord
+end

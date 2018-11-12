@@ -14,21 +14,29 @@
   </thead>
 
   <tbody>
+    <div class="row">
     <% @quests.each do |quest| %>
       <% if quest.creator == current_company.id %>
-        <tr>
-          <td><%= quest.id %></td>
-          <td><%= quest.description %></td>
-          <td><%= quest.summary %></td>
-          <td><%= quest.creator %></td>
-          <td><%= link_to 'Show', quest %></td>
-          <td><%= link_to 'Edit', edit_quest_path(quest) %></td>
-          <td><%= link_to 'Destroy', quest, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
+      <div class="col-lg-4 col-md-3 col-sm-2 p-3">
+      <div class="shadow card " >
+        <div class="card-body">
+          <h4 class="card-title"><%=quest.description%></h4>
+          <div class="card-body" style="position: relative; height: 210px;margin-bottom: .5rem; overflow:auto ">
+            <%= quest.summary%>
+          </div>
+          <div class="text-center">
+          <%= link_to 'Mostrar', quest, class: "mr-2 btn btn-outline-primary" %>
+          <%= link_to 'Editar', edit_quest_path(quest), class: "mr-2 btn btn-outline-primary" %>
+          <%= link_to 'Apagar', quest, method: :delete, data: { confirm: 'Tem certeza? Essa ação não pode ser desfeita' }, class: "mr-2 btn btn-outline-danger" %>
+        </div>
+        </div>
+
+      </div>
+      </div>
       <%end%>
     <% end %>
-  </tbody>
-</table>
+  </div>
+
 
 <br>
 

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Answer Grids</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Order</th>
+      <th>Quest</th>
+      <th>Question</th>
+      <th>Value</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @answer_grids.each do |answer_grid| %>
+      <tr>
+        <td><%= answer_grid.order %></td>
+        <td><%= answer_grid.quest_id %></td>
+        <td><%= answer_grid.question_id %></td>
+        <td><%= answer_grid.value %></td>
+        <td><%= answer_grid.user_id %></td>
+        <td><%= link_to 'Show', answer_grid %></td>
+        <td><%= link_to 'Edit', edit_answer_grid_path(answer_grid) %></td>
+        <td><%= link_to 'Destroy', answer_grid, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Answer Grid', new_answer_grid_path %>

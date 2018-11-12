@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Quests</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Description</th>
+      <th>Summary</th>
+      <th>Creator</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <div class="row">
+    <% @quests.each do |quest| %>
+      <% if quest.creator == current_company.id %>
+      <div class="col-lg-4 col-md-3 col-sm-2 p-3">
+      <div class="shadow card " >
+        <div class="card-body">
+          <h4 class="card-title"><%=quest.description%></h4>
+          <div class="card-body" style="position: relative; height: 210px;margin-bottom: .5rem; overflow:auto ">
+            <%= quest.summary%>
+          </div>
+          <div class="text-center">
+          <%= link_to 'Mostrar', quest, class: "mr-2 btn btn-outline-primary" %>
+          <%= link_to 'Editar', edit_quest_path(quest), class: "mr-2 btn btn-outline-primary" %>
+          <%= link_to 'Apagar', quest, method: :delete, data: { confirm: 'Tem certeza? Essa ação não pode ser desfeita' }, class: "mr-2 btn btn-outline-danger" %>
+        </div>
+        </div>
+
+      </div>
+      </div>
+      <%end%>
+    <% end %>
+  </div>
+
+
+<br>
+
+<%= link_to 'New Quest', new_quest_path %>

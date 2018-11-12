@@ -1,0 +1,2 @@
+class QuestionGrid < ApplicationRecord
+end

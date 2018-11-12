@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_11_220127) do
+ActiveRecord::Schema.define(version: 2018_11_11_220737) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "answer_grids", force: :cascade do |t|
+    t.integer "order"
+    t.integer "quest_id"
+    t.integer "question_id"
+    t.integer "value"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "companies", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -43,7 +53,7 @@ ActiveRecord::Schema.define(version: 2018_11_11_220127) do
   create_table "quests", force: :cascade do |t|
     t.string "description"
     t.text "summary"
-    t.string "creator"
+    t.integer "creator"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

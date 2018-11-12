@@ -1,4 +1,6 @@
 <%= current_company.name %>
 <%= current_company.cnpj %>
-<%= current_company.about_us %>
-<%= link_to('Logout', destroy_company_session_path, method: :delete) %> 
+<%= current_company.id %>
+<%= current_company.about_us %><br>
+<%= link_to('Logout', destroy_company_session_path, method: :delete) %><br>
+<%= link_to "Criar quest", new_quest_path, class: "btn btn-dark", role: "button" %>

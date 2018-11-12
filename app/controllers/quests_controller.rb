@@ -1,4 +1,5 @@
 class QuestsController < ApplicationController
+  before_action :authenticate_company!
   before_action :set_quest, only: [:show, :edit, :update, :destroy]
 
   # GET /quests
@@ -25,6 +26,7 @@ class QuestsController < ApplicationController
   # POST /quests.json
   def create
     @quest = Quest.new(quest_params)
+    @quest.creator = current_company.id
 
     respond_to do |format|
       if @quest.save

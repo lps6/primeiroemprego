@@ -1,14 +1,14 @@
 Given(/^that I am on the ([^"]*)/) do |page_name|
   case page_name
   when 'homepage'
-    visit root_path
+    visit(root_path)
   end
 end
 
 When(/^I follow "([^"]*)"$/) do |button|
   case button
   when 'Sign up' #É isto
-    page.find('btn-user-signup').click
+    click_button('btn-user-signup')
   end
 end
 

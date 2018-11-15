@@ -7,13 +7,16 @@ end
 
 When(/^I follow "([^"]*)"$/) do |button|
   case button
-  when 'Sign up'
+  when 'Sign up' #É isto
     click_button 'Sign up'
   end
 end
 
 Then(/^I should be on the "([^"]*)" page$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
+  case arg1
+  when something
+    do something
+  end
 end
 
 When(/^I fill in "([^"]*)" with a string$/) do |arg1|

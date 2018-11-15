@@ -24,7 +24,7 @@
 
 <h2>O que não foi feito</h2> 
 
-* Criaçaõ de função para listar usuarios/candidatos: Gabriel e Lucas  
+* Criação de função para listar usuarios/candidatos: Gabriel e Lucas  
 * Implementar Dashboad de cadidatos: Lucas e Gabriel
 * Implementar Dashboad de empresa: Lucas e Henrique  
 

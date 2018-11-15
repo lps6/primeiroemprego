@@ -1,0 +1,42 @@
+<%= form_with(model: question_grid, local: true) do |form| %>
+  <% if question_grid.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(question_grid.errors.count, "error") %> prohibited this question_grid from being saved:</h2>
+
+      <ul>
+      <% question_grid.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :id %>
+    <%= form.number_field :id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :positive %>
+    <%= form.check_box :positive %>
+  </div>
+
+  <div class="field">
+    <%= form.label :range %>
+    <%= form.number_field :range %>
+  </div>
+
+  <div class="field">
+    <%= form.label :increment %>
+    <%= form.number_field :increment %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quest_id %>
+    <%= form.number_field :quest_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

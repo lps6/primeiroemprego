@@ -5,24 +5,24 @@
 <table>
   <thead>
     <tr>
-      <th>Id</th>
+
+      <th>Title</th>
       <th>Description</th>
-      <th>Summary</th>
       <th>Creator</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
-  <tbody>
+</table>
     <div class="row">
     <% @quests.each do |quest| %>
-      <% if quest.creator == current_company.id %>
-      <div class="col-lg-4 col-md-3 col-sm-2 p-3">
+      <%# if quest.creator == current_company.id %>
+      <div class="d-flex flex-row p-2">
       <div class="shadow card " >
-        <div class="card-body">
-          <h4 class="card-title"><%=quest.description%></h4>
+        <div class="card-body " style="max-width: 350px;">
+          <h4 class="card-title"><%=quest.title%></h4>
           <div class="card-body" style="position: relative; height: 210px;margin-bottom: .5rem; overflow:auto ">
-            <%= quest.summary%>
+            <%= quest.description%>
           </div>
           <div class="text-center">
           <%= link_to 'Mostrar', quest, class: "mr-2 btn btn-outline-primary" %>
@@ -33,10 +33,9 @@
 
       </div>
       </div>
-      <%end%>
+
     <% end %>
   </div>
-
 
 <br>
 

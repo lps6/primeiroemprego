@@ -1,6 +1,8 @@
-<%= simple_form_for @quest do |f| %>
-  <%= f.input :title %>
-  <%= f.input :description %>
+<div class="col-sm-4 col-sm-offset-4">
+  <%= simple_form_for @quest do |f| %>
+  <%= f.text_field :title, placeholder: "Titulo", class:"form-control" %>
+  <%= f.text_area :description, placeholder: "Descrição", class:"form-control" %>
+  <div>
   <h3>question_grids</h3>
   <div id="question_grids">
     <%= f.simple_fields_for :question_grids do |question_grid| %>

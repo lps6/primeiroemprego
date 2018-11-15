@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_07_022622) do
+ActiveRecord::Schema.define(version: 2018_11_15_150641) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,22 @@ ActiveRecord::Schema.define(version: 2018_11_07_022622) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_companies_on_email", unique: true
     t.index ["reset_password_token"], name: "index_companies_on_reset_password_token", unique: true
+  end
+
+  create_table "question_grids", force: :cascade do |t|
+    t.string "enum"
+    t.bigint "quest_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["quest_id"], name: "index_question_grids_on_quest_id"
+  end
+
+  create_table "quests", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.integer "creator"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -48,4 +64,5 @@ ActiveRecord::Schema.define(version: 2018_11_07_022622) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "question_grids", "quests"
 end

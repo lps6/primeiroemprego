@@ -79,3 +79,9 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 
 gem 'omniauth-linkedin'
+
+gem 'haml-rails'
+
+gem 'simple_form'
+
+gem 'cocoon'

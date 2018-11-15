@@ -12,4 +12,4 @@ Scenario: User sign up
   And I fill in "Senha" with a valid password
   And I fill in "Confirmar senha" with a valid password
   And I press "Sign Up"
-  Then I should be on the Dashboard
+  Then I should be on the "Dashboard"

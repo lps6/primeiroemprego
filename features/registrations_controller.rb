@@ -36,6 +36,6 @@ When(/^I press "([^"]*)"$/) do |arg1|
   pending # Write code here that turns the phrase above into concrete actions
 end
 
-Then(/^I should be on the Dashboard$/) do |arg1|
+Then(/^I should be on the "([^"]*)"$/) do |arg1|
   pending # Write code here that turns the phrase above into concrete actions
 end

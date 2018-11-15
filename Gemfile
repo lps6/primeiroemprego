@@ -83,3 +83,9 @@ gem 'omniauth-facebook'
 
 #gem para login através do linkedin
 gem 'omniauth-linkedin'
+
+gem 'haml-rails'
+
+gem 'simple_form'
+
+gem 'cocoon'

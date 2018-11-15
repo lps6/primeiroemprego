@@ -1,28 +1,15 @@
-<%= form_with(model: quest, local: true) do |form| %>
-  <% if quest.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(quest.errors.count, "error") %> prohibited this quest from being saved:</h2>
-
-      <ul>
-      <% quest.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<%= simple_form_for @quest do |f| %>
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <h3>question_grids</h3>
+  <div id="question_grids">
+    <%= f.simple_fields_for :question_grids do |question_grid| %>
+      <%= render 'question_grid_fields', f: question_grid %>
+    <% end %>
+    <div class="links">
+      <%= link_to_add_association 'add task', f, :question_grids %>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description %>
   </div>
+  <%= f.submit %>
 
-  <div class="field">
-    <%= form.label :summary %>
-    <%= form.text_area :summary %>
-  </div>
-
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>

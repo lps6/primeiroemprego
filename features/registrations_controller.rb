@@ -8,15 +8,12 @@ end
 When(/^I follow "([^"]*)"$/) do |button|
   case button
   when 'Sign up' #É isto
-    click_button 'Sign up'
+    page.find('btn-user-signup').click
   end
 end
 
 Then(/^I should be on the "([^"]*)" page$/) do |arg1|
-  case arg1
-  when something
-    do something
-  end
+  pending 
 end
 
 When(/^I fill in "([^"]*)" with a string$/) do |arg1|
@@ -27,7 +24,7 @@ When(/^I fill in "([^"]*)" with a valid input$/) do |arg1|
   pending # Write code here that turns the phrase above into concrete actions
 end
 
-When(/^I select a valid birthdate$/) do
+When(/^I select a valid birthdate$/) do |arg1|
   pending # Write code here that turns the phrase above into concrete actions
 end
 
@@ -39,6 +36,6 @@ When(/^I press "([^"]*)"$/) do |arg1|
   pending # Write code here that turns the phrase above into concrete actions
 end
 
-Then(/^I should be on the Dashboard$/) do
+Then(/^I should be on the Dashboard$/) do |arg1|
   pending # Write code here that turns the phrase above into concrete actions
 end

@@ -1,0 +1,14 @@
+<%= simple_form_for @quest do |f| %>
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <h3>question_grids</h3>
+  <div id="question_grids">
+    <%= f.simple_fields_for :question_grids do |question_grid| %>
+      <%= render 'question_grid_fields', f: question_grid %>
+    <% end %>
+    <div class="links">
+      <%= link_to_add_association 'add task', f, :question_grids %>
+    </div>
+  </div>
+  <%= f.submit %>
+<% end %>

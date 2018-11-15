@@ -1,19 +1,25 @@
-<p id="notice"><%= notice %></p>
-
+<p id="notice">
+  <%= notice %>
+</p>
 <p>
-  <strong>Title:</strong>
+  <b>Name:</b>
   <%= @quest.title %>
 </p>
-
 <p>
-  <strong>Description:</strong>
+  <b>Description:</b>
   <%= @quest.description %>
 </p>
-
-<p>
-  <strong>Creator:</strong>
-  <%= @quest.creator %>
-</p>
-
-<%= link_to 'Edit', edit_quest_path(@quest) %> |
+<% unless @quest.question_grids.empty? %>
+  <p>
+    <b>question_grids:</b>
+  </p>
+  <ul>
+    <% @quest.question_grids.each do |question_grid| %>
+        <%= question_grid.enum %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+<%= link_to 'Edit', edit_quest_path(@quest) %>
+\|
 <%= link_to 'Back', quests_path %>

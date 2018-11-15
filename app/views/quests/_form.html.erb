@@ -3,6 +3,7 @@
   <%= simple_form_for @quest do |f| %>
   <%= f.text_field :title, placeholder: "Titulo", class:"form-control" %>
   <%= f.text_area :description, placeholder: "Descrição", class:"form-control" %>
+  <%= link_to 'Voltar', quests_path %>
   </div>
   <div>
   <h3>Insira as questões</h3>
@@ -11,7 +12,7 @@
       <%= render 'question_grid_fields', f: question_grid %>
     <% end %>
     <div class="links">
-      <%= link_to_add_association 'add task', f, :question_grids %>
+      <%= link_to_add_association 'Adicioanr questão', f, :question_grids, class: "btn btn-primary" %>
     </div>
   </div>
   <%= f.submit %>

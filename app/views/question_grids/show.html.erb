@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @question_grid.id %>
+</p>
+
+<p>
+  <strong>Positive:</strong>
+  <%= @question_grid.positive %>
+</p>
+
+<p>
+  <strong>Range:</strong>
+  <%= @question_grid.range %>
+</p>
+
+<p>
+  <strong>Increment:</strong>
+  <%= @question_grid.increment %>
+</p>
+
+<p>
+  <strong>Quest:</strong>
+  <%= @question_grid.quest_id %>
+</p>
+
+<%= link_to 'Edit', edit_question_grid_path(@question_grid) %> |
+<%= link_to 'Back', question_grids_path %>

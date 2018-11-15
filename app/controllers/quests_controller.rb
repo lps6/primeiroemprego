@@ -1,4 +1,7 @@
 class QuestsController < ApplicationController
+
+  before_action :authenticate_company!
+
   before_action :set_quest, only: [:show, :edit, :update, :destroy]
 
   # GET /quests
@@ -25,7 +28,6 @@ class QuestsController < ApplicationController
   # POST /quests.json
   def create
     @quest = Quest.new(quest_params)
-
     respond_to do |format|
       if @quest.save
         format.html { redirect_to @quest, notice: 'Quest was successfully created.' }

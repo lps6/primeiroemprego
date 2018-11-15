@@ -3,9 +3,11 @@ require 'rails_helper'
 RSpec.describe "quests/edit", type: :view do
   before(:each) do
     @quest = assign(:quest, Quest.create!(
+
       :title => "MyString",
       :description => "MyText",
       :creator => 1
+
     ))
   end
 

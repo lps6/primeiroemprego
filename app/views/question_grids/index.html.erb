@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Question Grids</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Positive</th>
+      <th>Range</th>
+      <th>Increment</th>
+      <th>Quest</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @question_grids.each do |question_grid| %>
+      <tr>
+        <td><%= question_grid.id %></td>
+        <td><%= question_grid.positive %></td>
+        <td><%= question_grid.range %></td>
+        <td><%= question_grid.increment %></td>
+        <td><%= question_grid.quest_id %></td>
+        <td><%= link_to 'Show', question_grid %></td>
+        <td><%= link_to 'Edit', edit_question_grid_path(question_grid) %></td>
+        <td><%= link_to 'Destroy', question_grid, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Question Grid', new_question_grid_path %>

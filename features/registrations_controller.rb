@@ -8,7 +8,7 @@ end
 When(/^I follow "([^"]*)"$/) do |button|
   case button
   when 'Sign up' #É isto
-    homepage.find('btn-user-signup').click
+    page.find('btn-user-signup').click
   end
 end
 

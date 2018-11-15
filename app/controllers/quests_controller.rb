@@ -1,5 +1,7 @@
 class QuestsController < ApplicationController
+
   before_action :authenticate_company!
+
   before_action :set_quest, only: [:show, :edit, :update, :destroy]
 
   # GET /quests
@@ -26,8 +28,6 @@ class QuestsController < ApplicationController
   # POST /quests.json
   def create
     @quest = Quest.new(quest_params)
-    @quest.creator = current_company.id
-
     respond_to do |format|
       if @quest.save
         format.html { redirect_to @quest, notice: 'Quest was successfully created.' }
@@ -71,6 +71,6 @@ class QuestsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def quest_params
-      params.require(:quest).permit(:id, :description, :summary, :creator)
+      params.require(:quest).permit(:title, :description, :creator, question_grids_attributes: [:id, :description, :enum, :_destroy])
     end
 end

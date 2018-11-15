@@ -3,10 +3,11 @@ require 'rails_helper'
 RSpec.describe "quests/edit", type: :view do
   before(:each) do
     @quest = assign(:quest, Quest.create!(
-      :id => 1,
-      :description => "MyString",
-      :summary => "MyText",
-      :creator => "MyString"
+
+      :title => "MyString",
+      :description => "MyText",
+      :creator => 1
+
     ))
   end
 
@@ -15,11 +16,9 @@ RSpec.describe "quests/edit", type: :view do
 
     assert_select "form[action=?][method=?]", quest_path(@quest), "post" do
 
-      assert_select "input[name=?]", "quest[id]"
+      assert_select "input[name=?]", "quest[title]"
 
-      assert_select "input[name=?]", "quest[description]"
-
-      assert_select "textarea[name=?]", "quest[summary]"
+      assert_select "textarea[name=?]", "quest[description]"
 
       assert_select "input[name=?]", "quest[creator]"
     end

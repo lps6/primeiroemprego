@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :answer_grids
+
   resources :quests
-  resources :question_grids
+
   get 'dashboard_empresa/index'
   devise_for :companies
   #devise_for :users

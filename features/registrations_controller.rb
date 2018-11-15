@@ -1,5 +1,15 @@
-When(/^I follow "([^"]*)"$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
+Given(/^that I am on the ([^"]*)/) do |page_name|
+  case page_name
+  when 'homepage'
+    visit root_path
+  end
+end
+
+When(/^I follow "([^"]*)"$/) do |button|
+  case button
+  when 'Sign up'
+    click_button 'Sign up'
+  end
 end
 
 Then(/^I should be on the "([^"]*)" page$/) do |arg1|

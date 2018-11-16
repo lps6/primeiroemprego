@@ -1,6 +1,10 @@
 <p id="notice">
   <%= notice %>
+<%= link_to 'Voltar', quests_path, class: "btn btn-outline-secondary" %>
 </p>
+<div class="d-flex justify-content-center p-2">
+<div class=" bg-light p-5 shadow", style="width:700px;">
+  <%= link_to 'Editar', edit_quest_path(@quest), class: "btn btn-primary float-right" %>
 <p>
   <b>Título:</b>
   <%= @quest.title %>
@@ -17,7 +21,7 @@
   <ul class="list-group list-group-flush">
     
     <% @quest.question_grids.each do |question_grid| %>
-    <li class="list-group-item">
+    <li class="list-group-item ">
         <%= question_grid.enum %></li>
     <% end %>
   </ul>
@@ -25,6 +29,8 @@
 <% end %>
 <br>
 <br>
-<%= link_to 'Editar', edit_quest_path(@quest), class: "btn btn-primary" %>
+</div>
+</div>
 
-<%= link_to 'Voltar', quests_path, class: "btn btn-secondary" %>
+
+

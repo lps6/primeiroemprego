@@ -4,7 +4,7 @@
   <%= f.text_field :title, class: "form-control" %><br>
   <%= f.label :Descrição %>
   <%= f.text_area :description, class: "form-control" %>
-  <h5><br>Adicionar perguntas</h5>
+  <h7><br>Perguntas</h7>
   <div id="question_grids">
     <%= f.simple_fields_for :question_grids do |question_grid| %>
       <%= render 'question_grid_fields', f: question_grid %>

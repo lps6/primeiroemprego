@@ -1,6 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Quests</h1>
+<div class="d-flex flex-nowrap">
+  <div class="">
+  <h2 class="mr-4">Quests criadas</h2><br><br>
+</div>
+<div class="">
+<%= link_to '+ Nova Quest', new_quest_path, class: "btn btn-outline-success"%>
+</div>
+</div>
     <div class="row">
     <% @quests.each do |quest| %>
       <%# if quest.creator == current_company.id %>
@@ -25,4 +32,4 @@
   </div>
 <br>
 
-<%= link_to 'Nova Quest', new_quest_path %>
+

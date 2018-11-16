@@ -1,0 +1,42 @@
+<%= form_with(model: answer_grid, local: true) do |form| %>
+  <% if answer_grid.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(answer_grid.errors.count, "error") %> prohibited this answer_grid from being saved:</h2>
+
+      <ul>
+      <% answer_grid.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :order %>
+    <%= form.number_field :order %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quest_id %>
+    <%= form.number_field :quest_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :question_id %>
+    <%= form.number_field :question_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :value %>
+    <%= form.number_field :value %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

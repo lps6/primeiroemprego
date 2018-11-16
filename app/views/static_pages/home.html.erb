@@ -6,8 +6,8 @@
   <p><%= @tagline %></p>
   
   <p class="lead">
+    <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary", role: "button", id:"btn-user-signup" %>
 
-    <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary", role: "button" %>
    
   </p>  
 </div>   
@@ -20,6 +20,7 @@
   
   <p class="lead">
 
-    <%= link_to "Sign up", new_company_registration_path, class: "btn btn-primary", role: "button" %>
+    <%= link_to "Sign up", new_company_registration_path, class: "btn btn-primary", role: "button", id:'btn-company-signup' %>
+
   </p>  
 </div>   

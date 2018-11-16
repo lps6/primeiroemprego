@@ -24,6 +24,9 @@ class QuestsController < ApplicationController
   def edit
   end
 
+  def question_counter(counter)
+    counter+=1
+  end
   # POST /quests
   # POST /quests.json
   def create

@@ -1,21 +1,17 @@
-<div class="d-flex d-inline">
-  <div class=" col-sm-4 col-sm-offset-4">
-  <%= simple_form_for @quest do |f| %>
-  <%= f.text_field :title, placeholder: "Titulo", class:"form-control" %>
-  <%= f.text_area :description, placeholder: "Descrição", class:"form-control" %>
-  <%= link_to 'Voltar', quests_path %>
-  </div>
-  <div>
-  <h3>Insira as questões</h3>
+
+<%= simple_form_for @quest do |f| %>
+<%= f.label :Titulo %>
+  <%= f.text_field :title, class: "form-control" %><br>
+  <%= f.label :Descrição %>
+  <%= f.text_area :description, class: "form-control" %>
+  <h5><br>Adicionar perguntas</h5>
   <div id="question_grids">
     <%= f.simple_fields_for :question_grids do |question_grid| %>
       <%= render 'question_grid_fields', f: question_grid %>
     <% end %>
     <div class="links">
-      <%= link_to_add_association 'Adicioanr questão', f, :question_grids, class: "btn btn-primary" %>
+      <%= link_to_add_association 'Adicionar pergunta', f, :question_grids, class: "btn btn-primary"%>
     </div>
   </div>
-  <%= f.submit %>
-</div>
-</div>
+  <%= f.submit "Criar quest!", class: "btn btn-success"%>
 <% end %>

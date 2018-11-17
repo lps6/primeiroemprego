@@ -53,8 +53,10 @@ ActiveRecord::Schema.define(version: 2018_11_15_191617) do
     t.string "title"
     t.text "description"
     t.integer "creator"
+    t.bigint "company_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["company_id"], name: "index_quests_on_company_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -76,4 +78,5 @@ ActiveRecord::Schema.define(version: 2018_11_15_191617) do
   end
 
   add_foreign_key "question_grids", "quests"
+  add_foreign_key "quests", "companies"
 end

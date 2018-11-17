@@ -20,19 +20,29 @@ Then(/^I should be on the page ([^"]*)/) do |arg1|
   end
 end
 
-When(/^I fill in "([^"]*)" with a string$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-When(/^I fill in "([^"]*)" with a valid input$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
+When(/^I fill in ([^"]*) with ([^"]*)/) do |param, filler|
+  case param
+  when "Nome"
+    page.find(param).fill_in(param, with: filler)
+  end
+  when "CPF"
+    page.find(param).fill_in(param, with: filler)
+  end
+  when "Sobre Mim"
+    page.find(param).fill_in(param, with: filler)
+  end
+  when "Email"
+    page.find(param).fill_in(param, with: filler)
+  end
+  when "Senha"
+    page.find(param).fill_in(param, with: filler)
+  end
+  when "Confirmar Senha"
+    page.find(param).fill_in(param, with: filler)
+  end  
 end
 
 When(/^I select a valid birthdate$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-When(/^I fill in "([^"]*)" with a valid password$/) do |arg1|
   pending # Write code here that turns the phrase above into concrete actions
 end
 

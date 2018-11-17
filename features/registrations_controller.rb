@@ -1,15 +1,12 @@
 Given(/^that I am on the ([^"]*)/) do |page_name|
   case page_name
   when 'homepage'
-    visit('http://localhost:3000')
+    visit(root_path)
   end
 end
 
-When(/^I follow "([^"]*)"$/) do |button|
-  case button
-  when 'Sign up' #É isto
-    click_button('btn-user-signup')
-  end
+When(/^I follow Sign up/) do 
+  click_button('btn-user-signup')
 end
 
 Then(/^I should be on the "([^"]*)" page$/) do |arg1|

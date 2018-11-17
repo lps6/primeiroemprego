@@ -5,12 +5,23 @@
 # files.
 
 require 'cucumber/rails'
-require "selenium-webdriver"
-require 'gherkin'
+require 'chromedriver-helper'
+#require "selenium-webdriver"
+require 'capybara/cucumber'
+require 'rspec/expectations'
+
+
 
  Capybara.default_driver = :selenium
- Capybara.default_wait_time = 20
- Capybara.javascript_driver = :webkit
+ Capybara.default_max_wait_time = 20
+ Capybara.register_driver :chrome do |app|
+  Capybara::Selenium::Driver.new(app, :browser => :chrome)
+ end
+
+Capybara.javascript_driver = :chrome
+
+
+#Capybara.javascript_driver = :webkit
 
 
 # Capybara defaults to CSS3 selectors rather than XPath.
@@ -63,9 +74,3 @@ end
 # See https://github.com/cucumber/cucumber-rails/blob/master/features/choose_javascript_database_strategy.feature
 Cucumber::Rails::Database.javascript_strategy = :truncation
 
-if Capybara.current_driver == :selenium
-  require 'headless'
-
-  headless = Headless.new
-  headless.start
-end

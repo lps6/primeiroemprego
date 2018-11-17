@@ -13,8 +13,11 @@ When(/^I follow ([^"]*)/) do |button|
 end
 
 
-Then(/^I should be on the "([^"]*)" page$/) do |arg1|
-  pending 
+Then(/^I should be on the page ([^"]*)/) do |arg1|
+  case arg1
+  when "Sign Up"
+    expect(page).to current_path(new_user_registration_path)   
+  end
 end
 
 When(/^I fill in "([^"]*)" with a string$/) do |arg1|

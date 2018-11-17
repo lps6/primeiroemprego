@@ -59,6 +59,9 @@ class QuestsController < ApplicationController
   # DELETE /quests/1
   # DELETE /quests/1.json
   def destroy
+    @quest.question_grids do |question|
+      question.destroy
+    end
     @quest.destroy
     respond_to do |format|
       format.html { redirect_to quests_url, notice: 'Quest was successfully destroyed.' }

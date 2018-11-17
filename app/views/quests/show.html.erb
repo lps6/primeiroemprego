@@ -1,26 +1,36 @@
 <p id="notice">
   <%= notice %>
+<%= link_to 'Voltar', quests_path, class: "btn btn-outline-secondary" %>
 </p>
+<div class="d-flex justify-content-center p-2">
+<div class=" bg-light p-5 shadow", style="width:700px;">
+  <%= link_to 'Editar', edit_quest_path(@quest), class: "btn btn-primary float-right" %>
 <p>
-  <b>Name:</b>
+  <b>Título:</b>
   <%= @quest.title %>
 </p>
 <p>
-  <b>Description:</b>
+  <b>Descrição:</b>
   <%= @quest.description %>
 </p>
 <% unless @quest.question_grids.empty? %>
   <p>
-    <b>question_grids:</b>
+    <b>Perguntas:</b>
   </p>
-  <ul>
+  <div class="card">
+  <ul class="list-group list-group-flush">
+    
     <% @quest.question_grids.each do |question_grid| %>
-        <%= question_grid.enum %>
-      </li>
+    <li class="list-group-item ">
+        <%= question_grid.enum %></li>
     <% end %>
   </ul>
+</div>
 <% end %>
-<%= link_to 'Edit', edit_quest_path(@quest) %>
-\|
+<br>
+<br>
+</div>
+</div>
 
-<%= link_to 'Back', quests_path %>
+
+

@@ -1,7 +1,7 @@
 Given(/^that I am on the ([^"]*)/) do |page_name|
   case page_name
   when 'homepage'
-    visit(root_path)
+    visit('http://localhost:3000')
   end
 end
 

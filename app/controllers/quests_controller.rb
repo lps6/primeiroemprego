@@ -18,20 +18,17 @@ class QuestsController < ApplicationController
   # GET /quests/new
   def new
     @quest = Quest.new
-    @quest.creator = current_company.id
   end
 
   # GET /quests/1/edit
   def edit
   end
 
-  def question_counter(counter)
-    counter+=1
-  end
   # POST /quests
   # POST /quests.json
   def create
     @quest = Quest.new(quest_params)
+    @quest.creator = current_company.id
     respond_to do |format|
       if @quest.save
         format.html { redirect_to @quest, notice: 'Quest was successfully created.' }

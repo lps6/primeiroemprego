@@ -5,7 +5,7 @@ testbrowser = cb ? cb.downcase.to_sym : :chrome
 puts "-------------- current browser: #{testbrowser}........."
 Capybara.register_driver :selenium do |app|
   if RbConfig::CONFIG['host_os'][/linux/] && testbrowser.to_s.eql?("CHROME".downcase)
-    Capybara::Selenium::Driver.new(app, {:browser => :remote, :url => "http://getxp.me"})
+    Capybara::Selenium::Driver.new(app, {:browser => :remote, :url => "http://0.0.0.0:3000"})
   else
     if testbrowser.eql?(:chrome)
       Capybara::Selenium::Driver.new(app, :browser => :chrome, :switches => %w[--test-type])

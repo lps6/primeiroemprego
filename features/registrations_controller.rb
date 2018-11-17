@@ -5,9 +5,13 @@ Given(/^that I am on the ([^"]*)/) do |page_name|
   end
 end
 
-When(/^I follow Sign up/) do 
-  click_button('btn-user-signup')
+When(/^I follow ([^"]*)/) do |button|
+  case button
+  when 'Sign up'
+    page.find('btn-user-signup').click
+  end
 end
+
 
 Then(/^I should be on the "([^"]*)" page$/) do |arg1|
   pending 

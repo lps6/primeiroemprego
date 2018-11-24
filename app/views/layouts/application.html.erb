@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Get XP</title>
+    <%= favicon_link_tag asset_path('favicon.ico'), :rel => 'icon', :type =>  'image/png' %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,14 +10,16 @@
   </head>
 
 
-  <body>
-    <nav class="navbar navbar-dark bg-dark flex-md-nowrap p-0 shadow">
+  <body style="padding-top: 70px;">
+
+    <nav class="navbar fixed-top navbar navbar-dark bg-primary flex-md-nowrap  shadow-sm">
+
         <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="/">GetXp</a>
         
         <ul class="navbar-nav px-3">
           <li class="nav-item text-nowrap">
 
-            <%= link_to "Sign in", new_user_session_path, class: "nav-link" %>
+            <%= link_to "Sign in", new_user_session_path, class: "nav-link text-white" %>
 
           </li>
         

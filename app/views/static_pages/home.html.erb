@@ -6,12 +6,13 @@
   <p><%= @tagline %></p>
   
   <p class="lead">
+    <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary", role: "button", id:"btn-user-signup" %>
 
-    <%= link_to "Sign up", new_user_registration_path, class: "btn btn-dark", role: "button" %>
    
   </p>  
 </div>   
-
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
 <div class="jumbotron fluid-jumbotron">
   <h1 class="display-3"><%=@titleforcompanies%></h1>
   <p class="lead"><%=@jumbotronforcompanies%></p>
@@ -20,6 +21,7 @@
   
   <p class="lead">
 
-    <%= link_to "Sign up", new_company_registration_path, class: "btn btn-dark", role: "button" %>
+    <%= link_to "Sign up", new_company_registration_path, class: "btn btn-primary", role: "button", id:'btn-company-signup' %>
+
   </p>  
 </div>   

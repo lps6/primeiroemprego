@@ -6,7 +6,7 @@ feature 'User edit', :devise do
 
   after(:each) do
     Warden.test_reset!
-
+  end
   scenario 'user changes email address' do
     user = FactoryGirl.create(:user)
     login_as(user, :scope => :user)

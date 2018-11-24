@@ -7,6 +7,15 @@ GIT
       popper_js (>= 1.14.3, < 2)
       sassc (>= 1.12.1)
 
+GIT
+  remote: https://github.com/twbs/bootstrap-sass.git
+  revision: 34989d5402641403abc3807473a6434540bb212b
+  branch: next
+  specs:
+    bootstrap-sass (3.3.7)
+      autoprefixer-rails (>= 5.2.1)
+      sassc (>= 1.12.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -124,6 +133,13 @@ GEM
     erubi (1.7.1)
     erubis (2.7.0)
     execjs (2.7.0)
+    factory_girl (4.9.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.9.0)
+      factory_girl (~> 4.9.0)
+      railties (>= 3.0.0)
+    faker (1.9.1)
+      i18n (>= 0.7)
     faraday (0.15.3)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.25)
@@ -327,6 +343,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.1.0)
   bootstrap!
+  bootstrap-sass!
   byebug
   cancancan
   capybara (>= 2.15)
@@ -337,6 +354,8 @@ DEPENDENCIES
   cucumber-rails
   database_cleaner
   devise
+  factory_girl_rails
+  faker
   gherkin
   haml-rails
   headless

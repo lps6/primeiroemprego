@@ -2,28 +2,7 @@
 <div>
 	<h2><%= current_user.name %><h2>
 </div>
-<script type="text/javascript">
-var form = FormApp.create('New Form');
-var item = form.addCheckboxItem();
-item.setTitle('What condiments would you like on your hot dog?');
-item.setChoices([
-        item.createChoice('Ketchup'),
-        item.createChoice('Mustard'),
-        item.createChoice('Relish')
-    ]);
-form.addMultipleChoiceItem()
-    .setTitle('Do you prefer cats or dogs?')
-    .setChoiceValues(['Cats','Dogs'])
-    .showOtherOption(true);
-form.addPageBreakItem()
-    .setTitle('Getting to know you');
-form.addDateItem()
-    .setTitle('When were you born?');
-form.addGridItem()
-    .setTitle('Rate your interests')
-    .setRows(['Cars', 'Computers', 'Celebrities'])
-    .setColumns(['Boring', 'So-so', 'Interesting']);
-Logger.log('Published URL: ' + form.getPublishedUrl());
-</script>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
 <%= link_to('Logout', destroy_user_session_path, method: :delete) %> 
 

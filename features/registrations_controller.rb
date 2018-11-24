@@ -7,8 +7,12 @@ end
 
 When(/^I follow ([^"]*)/) do |button|
   case button
-  when 'Sign up'
+  when 'Sign Up'
     page.find('btn-user-signup').click
+  end
+  case button
+  when 'Sign up'
+    page.find('btn-company-signup').click
   end
 end
 
@@ -21,6 +25,10 @@ Then(/^I should be on the page ([^"]*)/) do |arg1|
   case arg1
   when "Dashboard"
     expect(page).to current_path(dashboard_path)  
+  end
+  case arg1  
+  when "Sign up"
+    expect(page).to current_path(new_company_registration_path)
   end
 end
 

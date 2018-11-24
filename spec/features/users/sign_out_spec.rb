@@ -1,3 +1,4 @@
+require "spec_helper"
 feature 'Sign out', :devise do
 
     scenario 'user signs out successfully' do

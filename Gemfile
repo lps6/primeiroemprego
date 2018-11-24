@@ -62,6 +62,7 @@ group :test do
   gem 'headless'
   gem 'capybara-selenium'
   gem 'selenium-webdriver'  
+  gem 'bootstrap-sass', :git => 'https://github.com/twbs/bootstrap-sass.git', :branch => 'next'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
   gem 'cucumber-rails', require: false

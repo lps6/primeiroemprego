@@ -7,6 +7,15 @@ GIT
       popper_js (>= 1.14.3, < 2)
       sassc (>= 1.12.1)
 
+GIT
+  remote: https://github.com/twbs/bootstrap-sass.git
+  revision: 34989d5402641403abc3807473a6434540bb212b
+  branch: next
+  specs:
+    bootstrap-sass (3.3.7)
+      autoprefixer-rails (>= 5.2.1)
+      sassc (>= 1.12.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -334,6 +343,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.1.0)
   bootstrap!
+  bootstrap-sass!
   byebug
   cancancan
   capybara (>= 2.15)

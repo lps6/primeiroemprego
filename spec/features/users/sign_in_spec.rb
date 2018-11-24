@@ -1,4 +1,4 @@
-require "spec_helper"
+
 feature 'Sign in', :devise do
 
 
@@ -26,5 +26,11 @@ feature 'Sign in', :devise do
       signin(user.email, 'invalidpass')
       expect(page).to have_content I18n.t 'devise.failure.invalid', authentication_keys: 'Email'
     end
-  
+
+  end
+  def signin(email, password)
+        visit new_user_session_path
+        fill_in 'Email', with: email
+        fill_in 'Senha', with: password
+        click_button 'Login'
   end

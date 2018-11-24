@@ -3,11 +3,12 @@
 <%= current_company.about_us %><br>
 <%= current_company.cnpj %><br>
 <%= current_company.id %><br>
-
 </div>
 <div>
 
 
 <%= link_to('Logout', destroy_company_session_path, method: :delete) %><br>
 <%= link_to "Criar quest", new_quest_path, class: "btn btn-dark", role: "button" %>
+<%= link_to "dashboard_empresa/index", class: "btn btn-outline-secondary" %><br />
+<%= render 'quests/index', quest: @quest %>
 </div>

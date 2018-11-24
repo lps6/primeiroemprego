@@ -1,7 +1,7 @@
 Feature: Company can create a profile via Sign Up
 
 Scenario: Company sign up
-  Given that I am on the "home page"
+  Given that I am on the "homepage"
   When I follow "Sign up"
   Then I should be on the page "Sign up"
   When I fill in "company_name" with "Nightswatch"

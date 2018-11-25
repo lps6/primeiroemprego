@@ -1,0 +1,21 @@
+%h1 Listing user_quests
+
+%table
+  %thead
+    %tr
+      %th Quest
+      %th
+      %th
+      %th
+
+  %tbody
+    - @user_quests.each do |user_quest|
+      %tr
+        %td= user_quest.quest_id
+        %td= link_to 'Show', user_quest
+        %td= link_to 'Edit', edit_user_quest_path(user_quest)
+        %td= link_to 'Destroy', user_quest, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New User quest', new_user_quest_path

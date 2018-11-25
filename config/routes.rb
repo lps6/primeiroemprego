@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :user_quests
   resources :quests
 
   get 'dashboard_empresa/index'

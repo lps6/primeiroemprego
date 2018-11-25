@@ -1,14 +1,37 @@
-<div class="float-left mr-3 align-self-stretch" style="height: 100%; background: red">
-<h4><%= current_company.name %><br></h4>
-<%= current_company.about_us %><br>
-<%= current_company.cnpj %><br>
-<%= current_company.id %><br>
-</div>
 <div>
+<div  class=" bg-light" style="height: 100%;
+    width: 360px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 60px;">
+<h4 style="padding-top: 30px; padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    display: block;"><%= current_company.name %></h4>
+<h5 style="padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+
+    display: block;"><%= current_company.about_us %><br>
+<%= current_company.cnpj %><br></h5>
+<h5 style="padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;"><%= current_company.id %><br></h5>
+
 
 
 <%= link_to('Logout', destroy_company_session_path, method: :delete) %><br>
 <%= link_to "Criar quest", new_quest_path, class: "btn btn-dark", role: "button" %>
-<%= link_to "dashboard_empresa/index", class: "btn btn-outline-secondary" %><br />
+
+</div>
+
+<div style=" padding-left: 380px;" 
+>
 <%= render 'quests/index', quest: @quest %>
+
+</div>
 </div>

@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<div class="d-flex flex-wrap">
+  <div class="">
+  <h2 class="mr-4">Quests disponiveis</h2><br><br>
+</div>
+</div>
+    <div class="row">
+    <% @quest.each do |quest| %>
+      <div class="d-flex justify-content-end p-2">
+      <div class="shadow card " >
+        <div class="card-body " style="width: 370px;">
+          <h4 align='center' class="card-title" style="font-size: 22px";><%=quest.title%></h4>
+          <div class="card-body" style="position: relative; height: 210px;margin-bottom: .5rem; overflow:auto ">
+            <p align='center'> <%= quest.description%></p>
+          </div>
+          <div class="text-center">
+          <%= link_to 'Tentar a sorte',edit_user_quest_path(quest), class: "mr-2 btn btn-outline-primary" %>
+          <%= link_to 'Tentar a sorte',new_user_quest_path(quest), class: "mr-2 btn btn-outline-primary" %>
+        </div>
+        </div>
+
+      </div>
+      </div>
+      
+
+    <% end %>
+  </div>
+
+<br>
+
+

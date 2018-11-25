@@ -1,0 +1,13 @@
+<% # frozen_string_literal: true %>
+<%simple_form_for @quest do |quest|%>
+<% quest.question_grids.each do |question_grid| %>
+<li class="list-group-item ">
+  <%= question_grid.enum %></li>
+  <% question_grid.answer_grids.new do |answer| %>
+  <%=answer.value %>
+  <%=answer.user_id %>
+  <%=answer.question_grid_id %>
+  <%answer.text_field :value %>
+  <% end %>
+  <%end%>
+<% end %>

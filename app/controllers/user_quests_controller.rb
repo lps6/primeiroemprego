@@ -4,7 +4,7 @@ class UserQuestsController < ApplicationController
   # GET /user_quests
   # GET /user_quests.json
   def index
-    @user_quests = UserQuest.all
+    @quest = Quest.all
   end
 
   # GET /user_quests/1
@@ -25,16 +25,7 @@ class UserQuestsController < ApplicationController
   # POST /user_quests.json
   def create
     @user_quest = UserQuest.new(user_quest_params)
-
-    respond_to do |format|
-      if @user_quest.save
-        format.html { redirect_to @user_quest, notice: 'User quest was successfully created.' }
-        format.json { render :show, status: :created, location: @user_quest }
-      else
-        format.html { render :new }
-        format.json { render json: @user_quest.errors, status: :unprocessable_entity }
-      end
-    end
+    @user_quest.user_id = current_user.id
   end
 
   # PATCH/PUT /user_quests/1

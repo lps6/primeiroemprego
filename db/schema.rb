@@ -10,14 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_24_145258) do
+ActiveRecord::Schema.define(version: 2018_11_25_151936) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "answer_grids", force: :cascade do |t|
     t.integer "value"
-    t.bigint "question_grid_id"
+    t.integer "question_grid_id"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["question_grid_id"], name: "index_answer_grids_on_question_grid_id"
@@ -56,6 +57,13 @@ ActiveRecord::Schema.define(version: 2018_11_24_145258) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["company_id"], name: "index_quests_on_company_id"
+  end
+
+  create_table "user_quests", force: :cascade do |t|
+    t.integer "quest_id"
+    t.integer "user_quest_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

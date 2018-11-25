@@ -18,6 +18,10 @@ When(/^I follow ([^"]*)/) do |button|
   when 'sign in'
     page.find('btn-user-singin')
   end
+  case button
+  when 'Nova Quest'
+    page.find('btn-create-quest')
+  end
 end
 
 Then(/^I should be on the page ([^"]*)/) do |arg1|
@@ -41,7 +45,7 @@ end
 
 When("I fill in {string} with {string}") do |param, filler|
   case param
-  when "Useless string"
+  when "{string}"
     page.find(param).fill_in(param, with: filler)
   end
 end

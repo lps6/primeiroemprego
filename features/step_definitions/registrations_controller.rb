@@ -41,7 +41,7 @@ end
 
 When("I fill in {string} with {string}") do |param, filler|
   case param
-  when ""
+  when "Useless string"
     page.find(param).fill_in(param, with: filler)
   end
 end
@@ -53,6 +53,10 @@ When(/^I press ([^"]*)/) do |button|
   end
   case button
   when 'Sign In'
-    page.find('Sign In').click
+    page.find('Log In').click
+  end
+  case button
+  when 'Empresa?'
+    page.find('Empresa?').click
   end
 end

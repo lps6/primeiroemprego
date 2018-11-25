@@ -1,37 +1,13 @@
-<p id="notice">
-  <%= notice %>
-<%= link_to 'Voltar', :back, class: "btn btn-outline-secondary" %>
-</p>
-<div class="d-flex justify-content-center p-2">
-<div class=" bg-light p-5 shadow", style="width:700px;">
-<p>
-  <b>Título:</b>
-  <%= @quest.title %>
-</p>
-<p>
-  <b>Descrição:</b>
-  <%= @quest.description %>
-</p>
-<% unless @quest.question_grids.empty? %>
-  <p>
-    <b>Perguntas:</b>
-  </p>
-  <div class="card">
-  <ul class="list-group list-group-flush">
-    
-    <% @quest.question_grids.each do |question_grid| %>
-    <li class="list-group-item ">
-        <%= question_grid.enum %></li>
-
-
-    <% end %>
-  </ul>
-</div>
+<% # frozen_string_literal: true %>
+<%simple_form_for @quest do |quest|%>
+<% quest.question_grids.each do |question_grid| %>
+<li class="list-group-item ">
+  <%= question_grid.enum %></li>
+  <% question_grid.answer_grids.new do |answer| %>
+  <%=answer.value %>
+  <%=answer.user_id %>
+  <%=answer.question_grid_id %>
+  <%answer.text_field :value %>
+  <% end %>
+  <%end%>
 <% end %>
-<br>
-<br>
-</div>
-</div>
-
-
-

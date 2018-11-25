@@ -61,7 +61,8 @@ ActiveRecord::Schema.define(version: 2018_11_25_151936) do
 
   create_table "user_quests", force: :cascade do |t|
     t.integer "quest_id"
-    t.integer "user_quest_id"
+    t.integer "user_id"
+    t.integer "question_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

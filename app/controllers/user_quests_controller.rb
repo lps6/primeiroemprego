@@ -14,11 +14,14 @@ class UserQuestsController < ApplicationController
 
   # GET /user_quests/new
   def new
-    @user_quest = UserQuest.new
+    @quest = Quest.find(params[:id])
+    @user_quest = Quest.user_quest.new
   end
 
   # GET /user_quests/1/edit
   def edit
+    @quest = Quest.find(params[:id])
+    @user_quest = UserQuest.new
   end
 
   # POST /user_quests

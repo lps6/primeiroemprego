@@ -1,35 +1,46 @@
 <div>
-<div  class=" bg-light" style="height: 100%;
+<div  class="shadow" style="height: 100%;
     width: 360px;
     position: fixed;
     z-index: 1;
     top: 0;
+    background-color: #f4f4f4;
     left: 0;
     overflow-x: hidden;
     padding-top: 60px;">
-<h4 style="padding-top: 30px; padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    display: block;"><%= current_company.name %></h4>
-<h5 style="padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 20px;
+<div class="media" style="padding-top: 30px;">
+  <img class="d-flex align-self-start mr-3" src="/img.jpg" alt="Perfil">
+  <div class="media-body">
+    <h4 class="mt-0"><%= current_company.name %></h4>
+  </div>
+</div>
+<div class="d-flex flex-wrap justify-content-center" style="padding-top: 15px;">
+<div class="mb-3">
+<ul class=" flex-wrap shadow-sm list-group" style="text-align: center; width: 300px;">
+  <li class="list-group-item active">Quem somos nós?</li>
+  <li class="list-group-item"><%= current_company.about_us %></li>
+</ul>
+</div >
+<div class="mb-3">
+<ul class=" shadow-sm list-group" style="text-align: center; width: 300px;">
+  <li class="list-group-item active">CPNJ cadastrado</li>
+  <li class="list-group-item"><%= current_company.cnpj %></li>
+</ul>
+</div>
+<div class="mb-3">
+<ul class=" shadow-sm list-group" style="text-align: center; width: 300px;">
+  <li class="list-group-item active">Seu ID no GetXP</li>
+  <li class="list-group-item"><%= current_company.id %></li>
+</ul>
+</div>
+</div>
+<button type="button" class="btn btn-primary">Editar perfil</button>
+<%= link_to('Logout', destroy_company_session_path, class: "btn btn-secondary", method: :delete) %><br>
 
-    display: block;"><%= current_company.about_us %><br>
-<%= current_company.cnpj %><br></h5>
-<h5 style="padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 20px;
-    display: block;"><%= current_company.id %><br></h5>
-
-
-
-<%= link_to('Logout', destroy_company_session_path, method: :delete) %><br>
-<%= link_to "Criar quest", new_quest_path, class: "btn btn-dark", role: "button" %>
 
 </div>
 
-<div style=" padding-left: 380px;" 
+<div style=" padding-left: 405px;" 
 >
 <%= render 'quests/index', quest: @quest %>
 

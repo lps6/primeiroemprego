@@ -41,6 +41,14 @@ Then(/^I should be on the page ([^"]*)/) do |arg1|
   when 'sign in'
     expect(page).to current_path(new_user_session_path)
   end
+  case arg1
+  when "New Quest Page"
+    expect(page).to current_path(new_quest_path)
+  end
+  case arg1
+  when "Quest"
+    expect(page).to current_path(quest_path)
+  end
 end
 
 When("I fill in {string} with {string}") do |param, filler|
@@ -62,5 +70,23 @@ When(/^I press ([^"]*)/) do |button|
   case button
   when 'Empresa?'
     page.find('Empresa?').click
+  end
+  case button
+  when 'Adicionar pergunta'
+    page.find('Adicionar pergunta').click
+  end
+  case button
+  when 'Concluído'
+    page.find('Concluído').click
+  end
+end
+
+
+When (/^I generate ([^"]*)/) do |string|
+  i = 1
+  while i <= string.to_i do
+    page.find('Adicionar pergunta').click
+    page.find("Perguntas").fill_in("Perguntas", with: "question_"+number)
+    i = i+1
   end
 end

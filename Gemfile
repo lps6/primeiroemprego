@@ -100,3 +100,5 @@ gem 'simple_form'
 gem 'cocoon'
 
 gem 'loofah', ">= 2.2.3"
+
+gem 'devise-i18n'

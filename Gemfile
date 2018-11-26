@@ -62,11 +62,17 @@ group :test do
   gem 'headless'
   gem 'capybara-selenium'
   gem 'selenium-webdriver'  
+  gem 'bootstrap-sass', :git => 'https://github.com/twbs/bootstrap-sass.git', :branch => 'next'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
   gem 'gherkin'
+end
+
+group :development, :test do
+  gem 'factory_girl_rails'
+  gem 'faker'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -94,3 +100,5 @@ gem 'simple_form'
 gem 'cocoon'
 
 gem 'loofah', ">= 2.2.3"
+
+gem 'devise-i18n'

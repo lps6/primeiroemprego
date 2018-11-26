@@ -10,19 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_15_191617) do
+ActiveRecord::Schema.define(version: 2018_11_24_145258) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "answer_grids", force: :cascade do |t|
-    t.integer "order"
-    t.integer "quest_id"
-    t.integer "question_id"
     t.integer "value"
-    t.integer "user_id"
+    t.bigint "question_grid_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["question_grid_id"], name: "index_answer_grids_on_question_grid_id"
   end
 
   create_table "companies", force: :cascade do |t|
@@ -53,6 +51,7 @@ ActiveRecord::Schema.define(version: 2018_11_15_191617) do
     t.string "title"
     t.text "description"
     t.integer "creator"
+    t.integer "quant"
     t.bigint "company_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -77,6 +76,7 @@ ActiveRecord::Schema.define(version: 2018_11_15_191617) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "answer_grids", "question_grids"
   add_foreign_key "question_grids", "quests"
   add_foreign_key "quests", "companies"
 end

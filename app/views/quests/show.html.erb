@@ -1,10 +1,12 @@
 <p id="notice">
   <%= notice %>
-<%= link_to 'Voltar', quests_path, class: "btn btn-outline-secondary" %>
+<%= link_to 'Voltar', :back, class: "btn btn-outline-secondary" %>
 </p>
 <div class="d-flex justify-content-center p-2">
 <div class=" bg-light p-5 shadow", style="width:700px;">
+  <% if @quest.creator == current_company.id %>
   <%= link_to 'Editar', edit_quest_path(@quest), class: "btn btn-primary float-right" %>
+  <%end%>
 <p>
   <b>Título:</b>
   <%= @quest.title %>

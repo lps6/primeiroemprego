@@ -1,21 +1,19 @@
 
 <%= simple_form_for @quest do |f| %>
 <%= f.label :Titulo %>
-  <%= f.text_field :title, class: "form-control" %><br>
+  <%= f.text_field :title, class: "form-control", id: "fld-quest-title" %><br>
   <%= f.label :Descrição %>
-  <%= f.text_area :description, class: "form-control" %>
-
-  <%= f.text_field :quant, class: "form-control" %>
+  <%= f.text_area :description, class: "form-control", id: "fld-quest-description" %>
   <h7><br>Perguntas</h7>
   <div id="question_grids">
     <%= f.simple_fields_for :question_grids do |question_grid| %>
       <%= render 'question_grid_fields', f: question_grid %>
     <% end %>
     <div class="links">
-      <%= link_to_add_association 'Adicionar pergunta', f, :question_grids, class: "btn btn-primary"%>
+      <%= link_to_add_association 'Adicionar pergunta', f, :question_grids, class: "btn btn-primary",id: "btn-new-question"%>
     </div>
   </div>
   <br>
-  <%= f.submit "Concluído", class: "btn btn-success"%>
+  <%= f.submit "Concluído", class: "btn btn-success", id:"btn-submit-quest"%>
 <% end %>
 

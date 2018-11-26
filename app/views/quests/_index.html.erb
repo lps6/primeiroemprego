@@ -16,10 +16,10 @@
             <p align='center'> <%= quest.description%></p>
           </div>
           <div class="text-center">
-          <%= link_to 'Mostrar', quest, class: "mr-2 btn btn-outline-primary" %>
+          <%= link_to 'Mostrar', quest, class: "mr-2 btn btn-outline-primary",id:"btn-show-quest" %>
           <% if quest.creator == current_company.id %>
-          <%= link_to 'Editar', edit_quest_path(quest), class: "mr-2 btn btn-outline-primary" %>
-          <%= link_to 'Apagar', quest, method: :delete, data: { confirm: 'Tem certeza? Essa ação não pode ser desfeita' }, class: "mr-2 btn btn-outline-danger" %>
+          <%= link_to 'Editar', edit_quest_path(quest), class: "mr-2 btn btn-outline-primary", id:"btn-edit-quest" %>
+          <%= link_to 'Apagar', quest, method: :delete, data: { confirm: 'Tem certeza? Essa ação não pode ser desfeita' }, class: "mr-2 btn btn-outline-danger",id:"btn-delete-quest" %>
           <%end%>
         </div>
         </div>

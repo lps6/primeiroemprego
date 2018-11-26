@@ -1,59 +1,66 @@
-<h2>Editar <%= resource_name.to_s.humanize %></h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
-
-  <div class="field">
-      <%= f.label :CPF %><br />
-      <%= f.text_field :cpf %>
-  </div>
-
-  <div class="field">
-      <%= f.label :Sobre_mim %><br />
-      <%= f.text_area :about_me %>
-  </div>
+  <div align="center">
+  <div class="col-sm-5 col-sm-offset-4 z">
   
 
-  <div class="date">
-      <%= f.label :data_de_nascimento %><br />
-      <%= f.date_field :birth_date, autocomplete: "email" %>
-  </div>
+    <h2>Editar perfil</h2>
 
-  <div class="field">
-    <%= f.label :senha %> <i>(Deixar em branco, caso não queira modificar sua senha.)</i><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+      <%= devise_error_messages! %>
+
+      <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control" %>
+      </div>
+
+      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+        <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+      <% end %>
+
+      <div class="field">
+          <%= f.label :CPF %><br />
+          <%= f.text_field :cpf, class:"form-control" %>
+      </div>
+
+      <div class="field">
+          <%= f.label :Sobre_mim %><br />
+          <%= f.text_area :about_me, class:"form-control" %>
+      </div>
+      
+
+      <div class="date">
+          <%= f.label :data_de_nascimento %><br />
+          <%= f.date_field :birth_date, autocomplete: "email", class:"form-control" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :senha %><br><i>Precisamos da senha atual para confirmar as mudanças</i><br />
+        <%= f.password_field :current_password, autocomplete: "current-password", class:"form-control", id:'Senha' %>
+      </div>
+
+
+      <div class="field">
+        <%= f.label :confirmação_de_senha %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"form-control" %>
+      </div>
+
+
+      <div class="field">
+        <%= f.label :nova_senha %> <i></i><br />
+        <%= f.password_field :password, autocomplete: "new-password", class:"form-control" %>
+        <% if @minimum_password_length %>
+          <em>Pelo menos <%= @minimum_password_length %> caracteres</em>
+          <br>
+        <% end %>
+      </div>
+    
+      <div class="actions">
+        <%= f.submit "Atualizar", class: "btn btn-primary" %>
+      </div>
     <% end %>
+    <br>
+
+    <%= button_to "Cancelar meu cadastro", registration_path(resource_name), class: "btn btn-danger", data: { confirm: "Tem certeza?" }, method: :delete %></p>
+
+    <%= link_to "Volar", :back %>
   </div>
-
-  <div class="field">
-    <%= f.label :confirmação_de_senha %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
-
-  <div class="field">
-    <%= f.label :senha_atual %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Update" %>
-  </div>
-<% end %>
-
-<h3>Cancel my account</h3>
-
-<%= button_to "Cancelar meu cadastro", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Volar", :back %>

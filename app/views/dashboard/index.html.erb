@@ -1,8 +1,45 @@
-<h1> Esse é o dashboard!! :o </h1>
-<div>
-	<h2><%= current_user.name %><h2>
+<div  class="shadow" style="height: 100%;
+    width: 330px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    background-color: #f4f4f4;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 60px;">
+<div class="media" style="padding-top: 30px;">
+  <img class="d-flex align-self-start mr-3" src="/img.jpg" alt="Perfil">
+  <div class="media-body">
+    <h4 class="mt-0"><%= current_user.name %></h4>
+  </div>
 </div>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
-<%= link_to('Logout', destroy_user_session_path, method: :delete) %> 
+<p class="text-white notice"><%= notice %></p>
+<div class="d-flex flex-wrap justify-content-center" style="padding-top: 15px;">
+<div class="mb-3">
+<ul class=" flex-wrap shadow-sm list-group" style="text-align: center; width: 293px;">
+  <li class="list-group-item active">Sobre mim</li>
+  <li class="list-group-item" style="font-size: 14px;"><%= current_user.about_me %></li>
+</ul>
+</div >
+<div class="mb-3">
+<ul class=" shadow-sm list-group" style="text-align: center; width: 293px;">
+  <li class="list-group-item active">CPF</li>
+  <li class="list-group-item "style="font-size: 14px;"><%= current_user.cpf %></li>
+</ul>
+</div>
+<div class="mb-3">
+<ul class=" shadow-sm list-group" style="text-align: center; width: 293px;">
+  <li class="list-group-item active">Seu ID no GetXP</li>
+  <li class="list-group-item" style="font-size: 14px;"><%= current_user.id %></li>
+</ul>
+</div>
+</div>
+<%= link_to('Editar perfil', edit_user_registration_path, class: "btn btn-primary") %>
+<%= link_to('Logout', destroy_user_session_path, class: "btn btn-secondary", method: :delete) %><br>
+
+
+</div>
+<p class="text-white notice"><%= notice %></p>
+<p class="text-white alert"><%= alert %></p>
+
 

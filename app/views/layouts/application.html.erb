@@ -19,18 +19,21 @@
         <ul class="navbar-nav px-3">
           <li class="nav-item text-nowrap">
 
-            <%= link_to "Sign in", new_user_session_path, class: "nav-link text-white", id: 'btn-user-signin' %>
-
+            <% if !company_signed_in? and !user_signed_in?%> 
+              <%= link_to "Sign in", new_user_session_path, class: "nav-link text-white", id: 'btn-user-signin'  %>
+              <%else%>
+                <% if company_signed_in? %>
+                <%= link_to "Sair", destroy_company_session_path, :method => :delete, class: "nav-link text-white"  %>
+                <%else%>
+                 <%= link_to "Sair", destroy_user_session_path, :method => :delete, class: "nav-link text-white" %> 
+                 <%end%>
+              
+              <% end %>
           </li>
         
         </ul>
     </nav> 
-    <!--
-    <% if user_signed_in? %>
-      Logado como <%= current_user.email %>! Não é você? <%= link_to "Sign out", destroy_user_session_path, :method => :delete %> 
-    <% else %> 
-    <%= link_to "Sign up", new_user_registration_path %> / <%= link_to "Sign in", new_user_session_path %> <% end %>
-    -->
+
     <div class="container-fluid">
       <%= yield %>
     </div>

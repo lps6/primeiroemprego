@@ -14,7 +14,7 @@ feature 'User profile page', :devise do
     user = FactoryGirl.create(:user)
     login_as(user, :scope => :user)
     visit root_path(user)
-    expect(page).to have_content 'Esse é o dashboard'
+    expect(page).to have_content 'Sobre mim'
     expect(page).to have_content user.name
   end
 end

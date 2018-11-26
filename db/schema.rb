@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 2018_11_25_151936) do
     t.string "title"
     t.text "description"
     t.integer "creator"
-
+    t.integer "quant"
     t.bigint "company_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -63,10 +63,8 @@ ActiveRecord::Schema.define(version: 2018_11_25_151936) do
     t.integer "quest_id"
     t.integer "user_id"
     t.integer "question_id"
-
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["company_id"], name: "index_quests_on_company_id"
   end
 
   create_table "users", force: :cascade do |t|

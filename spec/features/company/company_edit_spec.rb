@@ -12,7 +12,7 @@ feature 'company edit', :devise do
     login_as(company, :scope => :company)
     visit edit_company_registration_path(company)
     fill_in 'Email', :with => 'newemail@example.com'
-    fill_in 'current_password', :with => 'please123'
+    fill_in 'Senha', :with => 'please123'
     click_button 'Atualizar'
     txts = [I18n.t( 'devise.registrations.updated'), I18n.t( 'devise.registrations.update_needs_confirmation')]
     expect(page).to have_content(/.*#{txts[0]}.*|.*#{txts[1]}.*/)

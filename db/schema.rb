@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 2018_11_25_151936) do
     t.string "title"
     t.text "description"
     t.integer "creator"
+    t.integer "quant"
     t.bigint "company_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

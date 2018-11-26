@@ -102,3 +102,5 @@ gem 'cocoon'
 gem 'loofah', ">= 2.2.3"
 
 gem 'devise-i18n'
+
+gem 'rails-i18n'

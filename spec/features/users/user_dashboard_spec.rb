@@ -13,10 +13,8 @@ feature 'User profile page', :devise do
   scenario 'user sees dashboard' do
     user = FactoryGirl.create(:user)
     login_as(user, :scope => :user)
-    visit edit_user_registration_path(user)
-    click_button 'Cancelar meu cadastro'
-    expect(page).to have_content I18n.t 'devise.registrations.destroyed'
+    visit root_path(user)
+    expect(page).to have_content 'Esse é o dashboard'
+    expect(page).to have_content user.name
   end
-
 end
-

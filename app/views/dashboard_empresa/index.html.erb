@@ -35,7 +35,7 @@
 </ul>
 </div>
 </div>
-<button type="button" class="btn btn-primary">Editar perfil</button>
+<%= link_to('Editar perfil', edit_company_registration_path, class: "btn btn-primary") %>
 <%= link_to('Logout', destroy_company_session_path, class: "btn btn-secondary", method: :delete) %><br>
 
 

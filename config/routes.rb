@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+  resources :answer_grids
   resources :user_quests
   resources :quests
 

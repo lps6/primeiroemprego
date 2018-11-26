@@ -22,6 +22,7 @@ class UserQuestsController < ApplicationController
   def edit
     @quest = Quest.find(params[:id])
     @user_quest = UserQuest.new
+    @answer_grid = AnswerGrid.new
   end
 
   # POST /user_quests
@@ -63,6 +64,6 @@ class UserQuestsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_quest_params
-      params.require(:user_quest).permit(:quest_id)
+      params.require(:user_quest).permit(:quest_id, :order)
     end
 end

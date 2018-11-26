@@ -14,6 +14,7 @@ class QuestionGridsController < ApplicationController
 
   # GET /question_grids/new
   def new
+    @question_grids = current_user.question_grids.build
     @question_grid = QuestionGrid.new
   end
 
@@ -25,7 +26,7 @@ class QuestionGridsController < ApplicationController
   # POST /question_grids.json
   def create
     @question_grid = QuestionGrid.new(question_grid_params)
-
+    @question_grids = current_user.question_grids.build(question_grid_params)
     respond_to do |format|
       if @question_grid.save
         format.html { redirect_to @question_grid, notice: 'Question grid was successfully created.' }

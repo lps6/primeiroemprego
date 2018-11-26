@@ -18,6 +18,7 @@ class QuestsController < ApplicationController
   # GET /quests/new
   def new
     @quest = Quest.new
+    
   end
 
   # GET /quests/1/edit

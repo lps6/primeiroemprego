@@ -8,6 +8,7 @@
 <div class=" bg-light p-5 shadow", style="width:700px;">
   <% if @quest.creator == current_company.id %>
   <%= link_to 'Editar', edit_quest_path(@quest), class: "btn btn-primary float-right" %>
+  <%= link_to 'Apagar', @quest, method: :delete, data: { confirm: 'Tem certeza? Essa ação não pode ser desfeita' }, class: "mr-2 btn btn-danger float-right",id:"btn-delete-quest" %>
   <%end%>
 <p>
   <b>Título:</b>

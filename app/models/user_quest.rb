@@ -1,3 +1,0 @@
-class UserQuest < ApplicationRecord
-
-end

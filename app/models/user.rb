@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :omniauthable
 
-
+has_many :answer_grids
 
 def update_with_password(params, *options)
 current_password = params.delete(:current_password)

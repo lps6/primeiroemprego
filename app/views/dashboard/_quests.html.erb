@@ -13,7 +13,7 @@
             <p align='center'> <%= quest.description%></p>
           </div>
           <div class="text-center">
-          <%= link_to 'Tentar a sorte',new_answer_path,quest: quest ,class: "mr-2 btn btn-outline-primary"%>
+          <%= link_to 'Tentar a sorte',{:controller => "answers", :action => "new", :quest_id => quest.id } ,class: "mr-2 btn btn-outline-primary"%>
         </div>
         </div>
 

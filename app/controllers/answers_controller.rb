@@ -14,6 +14,7 @@ class AnswersController < ApplicationController
 
   # GET /answers/new
   def new
+    @quest = Quest.find(params[:quest_id])
     @answer = Answer.new
   end
 
